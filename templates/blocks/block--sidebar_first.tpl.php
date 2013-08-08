@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Zen theme's implementation to display a block.
+ * Omega implementation to display a block.
  *
  * Available variables:
  * - $title: Block title.
@@ -42,9 +42,9 @@
  *
  * @see template_preprocess()
  * @see template_preprocess_block()
- * @see zen_preprocess_block()
+ * @see omega_preprocess_block()
  * @see template_process()
- * @see zen_process_block()
+ * @see omega_process_block()
  */
 ?>
 <div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>

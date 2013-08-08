@@ -1,11 +1,11 @@
 <?php
 /**
  * @file
- * Adaptivetheme implementation to display a single Drupal page.
+ * Omega implementation to display a single Drupal page.
  *
  * Available variables:
  *
- * Adaptivetheme supplied variables:
+ * Omega supplied variables:
  * - $site_logo: Themed logo - linked to front with alt attribute.
  * - $site_name: Site name linked to the homepage.
  * - $site_name_unlinked: Site name without any link.
@@ -75,8 +75,8 @@
  * @see template_preprocess()
  * @see template_preprocess_page()
  * @see template_process()
- * @see adaptivetheme_preprocess_page()
- * @see adaptivetheme_process_page()
+ * @see omega_preprocess_page()
+ * @see omega_process_page()
  */
 ?>
 <div id="page" class="container <?php print $classes; ?>">
@@ -189,7 +189,7 @@
                 <?php print render($page['help']); ?>
                 <?php if (isset($search_indexing_start)): ?>
                   <?php print $search_indexing_start; ?>
-                <?php endif; ?>                  
+                <?php endif; ?>
                 <div id="main-content">
                   <?php print render($title_prefix); ?>
                   <?php if ($title || $primary_local_tasks || $secondary_local_tasks || $action_links = render($action_links)): ?>
@@ -224,7 +224,7 @@
                 </div>
                 <?php if (isset($search_indexing_stop)): ?>
                   <?php print $search_indexing_stop; ?>
-                <?php endif; ?>                
+                <?php endif; ?>
                 <!-- region: Content Aside -->
                 <?php print render($page['content_aside']); ?>
               </div>
@@ -244,7 +244,7 @@
               <div class="wb-sec-def">
                 <div id="sidebar-first" class="sidebar">
                   <?php print $sidebar_first; ?>
-                </div>  
+                </div>
               </div>
             </nav>
           </div>
@@ -276,7 +276,7 @@
             <h3><?php print t('Government of Canada Footer'); ?></h3>
             <div id="gcwu-gcft-in">
               <div id="gcwu-gcft-fip">
-                <?php print $menu_footer_bar; ?>        
+                <?php print $menu_footer_bar; ?>
               </div>
             </div>
           </div>

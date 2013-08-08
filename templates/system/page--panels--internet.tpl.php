@@ -1,11 +1,11 @@
 <?php
 /**
  * @file
- * Adaptivetheme implementation to display a single Drupal page.
+ * Omega implementation to display a single Drupal page.
  *
  * Available variables:
  *
- * Adaptivetheme supplied variables:
+ * Omega supplied variables:
  * - $site_logo: Themed logo - linked to front with alt attribute.
  * - $site_name: Site name linked to the homepage.
  * - $site_name_unlinked: Site name without any link.
@@ -75,8 +75,8 @@
  * @see template_preprocess()
  * @see template_preprocess_page()
  * @see template_process()
- * @see adaptivetheme_preprocess_page()
- * @see adaptivetheme_process_page()
+ * @see omega_preprocess_page()
+ * @see omega_process_page()
  */
 ?>
 <div id="page" class="container <?php print $classes; ?>">
@@ -216,7 +216,7 @@
             <h3><?php print t('Government of Canada Footer'); ?></h3>
             <div id="gcwu-gcft-in">
               <div id="gcwu-gcft-fip">
-                <?php print $menu_footer_bar; ?>        
+                <?php print $menu_footer_bar; ?>
               </div>
             </div>
           </div>

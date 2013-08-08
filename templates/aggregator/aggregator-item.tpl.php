@@ -1,12 +1,8 @@
 <?php
 /**
  * @file
- * Adativetheme implementation to format an individual feed item for display
+ * Omega implementation to format an individual feed item for display
  * on the aggregator page.
- *
- * Adaptivetheme variables:
- * - $is_mobile: Bool, requires the Browscap module to return TRUE for mobile
- *   devices. Use to test for a mobile context.
  *
  * Available variables:
  * - $feed_url: URL to the originating feed item.
@@ -19,7 +15,7 @@
  *
  * @see template_preprocess()
  * @see template_preprocess_aggregator_item()
- * @see adaptivetheme_preprocess_aggregator_item()
+ * @see omega_preprocess_aggregator_item()
  */
 ?>
 <article class="<?php print $classes; ?>">

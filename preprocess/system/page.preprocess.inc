@@ -155,7 +155,7 @@ function wetkit_omega_preprocess_page(&$variables) {
 
   // Mega Menu Region.
   if (module_exists('menu_block') && empty($variables['page']['mega_menu'])) {
-    $config = menu_block_get_config('wetkit_menu_blocks-1');
+    $config = menu_block_get_config('main_menu');
     $data = menu_tree_build($config);
     $variables['page']['mega_menu'] = $data['content'];
   }
@@ -172,7 +172,7 @@ function wetkit_omega_preprocess_page(&$variables) {
 
   // Mid Footer Region.
   if (module_exists('menu_block')) {
-    $config = menu_block_get_config('wetkit_menu_blocks-2');
+    $config = menu_block_get_config('footer_menu');
     $data = menu_tree_build($config);
     $variables['page']['footer'] = $data['content'];
   }

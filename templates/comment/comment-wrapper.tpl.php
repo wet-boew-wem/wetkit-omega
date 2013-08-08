@@ -1,11 +1,7 @@
 <?php
 /**
  * @file
- * Adaptivetheme implementation to provide an HTML container for comments.
- *
- * Adaptivetheme variables:
- * - $is_mobile: Bool, requires the Browscap module to return TRUE for mobile
- *   devices. Use to test for a mobile context.
+ * Omega implementation to provide an HTML container for comments.
  *
  * Available variables:
  * - $content: The array of content-related elements for the node. Use

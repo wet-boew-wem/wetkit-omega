@@ -1,20 +1,16 @@
 <?php
 /**
  * @file
- * Adaptivetheme implementation to display a single Drupal page while offline.
+ * Omega implementation to display a single Drupal page while offline.
  *
  * Not all variables are mirrored from html.tpl.php and page.tpl.php, only those
  * required to deliver valid html page with branding and site offline messages.
  * $polyfills is included to support HTML5 in IE8 and below.
  *
- * Adaptivetheme variables:
- * - $is_mobile: Bool, requires the Browscap module to return TRUE for mobile
- *   devices. Use to test for a mobile context.
- *
  * @see template_preprocess()
  * @see template_preprocess_maintenance_page()
- * @see adaptivetheme_preprocess()
- * @see adaptivetheme_preprocess_maintenance_page()
+ * @see omega_preprocess()
+ * @see omega_preprocess_maintenance_page()
  */
 ?>
 <!DOCTYPE html>

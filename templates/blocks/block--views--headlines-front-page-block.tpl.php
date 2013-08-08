@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Zen theme's implementation to display a block.
+ * Omega implementation to display a block.
  *
  * Available variables:
  * - $title: Block title.
@@ -42,9 +42,9 @@
  *
  * @see template_preprocess()
  * @see template_preprocess_block()
- * @see zen_preprocess_block()
+ * @see omega_preprocess_block()
  * @see template_process()
- * @see zen_process_block()
+ * @see omega_process_block()
  */
 ?>
 
@@ -59,24 +59,24 @@
       <?php if ($language->language == 'en'): ?>
         <h2 id="wb-cont" <?php print $title_attributes; ?>><?php print $title; ?></h2>
       <?php endif;?>
-      
+
       <?php if ($language->language == 'fr'): ?>
         <h2<?php print $title_attributes; ?>>Titres</h2>
-      <?php endif;?>        
+      <?php endif;?>
     <?php endif;?>
 
     <?php print render($title_suffix); ?>
 
     <?php print $content ?>
-        
+
     <?php if ($language->language == 'en'): ?>
       <p><a href="/mediaroom">Visit the media room</a></p>
     <?php endif;?>
-      
+
     <?php if ($language->language == 'fr'): ?>
       <p><a href="/mediaroom">Visiter la salle des médias</a></p>
     <?php endif;?>
-    
+
   </div><!-- /.block -->
   </div>
 </section>

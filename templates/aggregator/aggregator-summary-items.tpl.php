@@ -1,13 +1,9 @@
 <?php
 /**
  * @file
- * Adativetheme implementation to present feeds as list items.
+ * Omega implementation to present feeds as list items.
  *
  * Each iteration generates a single feed source or category.
- *
- * Adaptivetheme variables:
- * - $is_mobile: Bool, requires the Browscap module to return TRUE for mobile
- *   devices. Use to test for a mobile context.
  *
  * Available variables:
  * - $title: Title of the feed or category.

@@ -2,11 +2,7 @@
 
 /**
  * @file
- * Adaptivetheme implementation to display a term.
- *
- * Adaptivetheme variables:
- * - $is_mobile: Bool, requires the Browscap module to return TRUE for mobile
- *   devices. Use to test for a mobile context.
+ * Omega implementation to display a term.
  *
  * Available variables:
  * - $name: the (sanitized) name of the term.
@@ -49,11 +45,11 @@
   <?php if (!$page): ?>
     <h2<?php print $title_attributes; ?>><a href="<?php print $term_url; ?>"><?php print $term_name; ?></a></h2>
   <?php endif; ?>
- 
+
   <div class="content"<?php print $content_attributes; ?>>
     <?php print $content; ?>
   </div>
-   
+
   <?php print render($title_suffix); ?>
 </article>
 <?php endif; ?>

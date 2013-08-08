@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Adaptivetheme implementation to present all user profile data.
+ * Omega implementation to present all user profile data.
  *
  * This template is used when viewing a registered member's profile page,
  * e.g., example.com/user/123. 123 being the users ID.
@@ -13,10 +13,6 @@
  * $user_profile['summary'] is provided, which contains data on the user's
  * history. Other data can be included by modules. $user_profile['user_picture']
  * is available for showing the account picture.
- *
- * Adaptivetheme variables:
- * - $is_mobile: Bool, requires the Browscap module to return TRUE for mobile
- *   devices. Use to test for a mobile context.
  *
  * Available variables:
  *   - $user_profile: An array of profile items. Use render() to print them.

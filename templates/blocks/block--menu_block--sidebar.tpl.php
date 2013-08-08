@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Omega implementation to display a block with bare minimum HTML.
+ * Omega implementation to display a block.
  *
  * Available variables:
  * - $title: Block title.
@@ -47,9 +47,9 @@
  * @see omega_process_block()
  */
 ?>
-<?php print render($title_prefix); ?>
-<?php if ($title): ?>
-  <h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
-<?php endif; ?>
-<?php print render($title_suffix); ?>
-<?php print $content; ?>
+<div>
+  <?php if ($title): ?>
+    <h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
+  <?php endif; ?>
+  <?php print $content; ?>
+</div>

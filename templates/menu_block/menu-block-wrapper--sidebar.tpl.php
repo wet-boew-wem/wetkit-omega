@@ -18,7 +18,7 @@
  * @see template_preprocess_menu_block_wrapper()
  */
 ?>
-<?php if ($variables['config']['delta'] == 'main_menu'): ?>
+<?php if ($variables['config']['delta'] == 'sidebar'): ?>
   <ul class="mb-menu">
   <?php print render($content); ?>
   </ul>

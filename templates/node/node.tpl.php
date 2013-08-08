@@ -1,24 +1,7 @@
 <?php
 /**
  * @file
- * Adaptivetheme implementation to display a node.
- *
- * Adaptivetheme variables:
- * AT Core sets special time and date variables for use in templates:
- * - $submitted: Submission information created from $name and $date during
- *   adaptivetheme_preprocess_node(), uses the $publication_date variable.
- * - $datetime: datetime stamp formatted correctly to ISO8601.
- * - $publication_date: publication date, formatted with time element and
- *   pubdate attribute.
- * - $datetime_updated: datetime stamp formatted correctly to ISO8601.
- * - $last_update: last updated date/time, formatted with time element and
- *   pubdate attribute.
- * - $custom_date_and_time: date time string used in $last_update.
- * - $header_attributes: attributes to apply to the header element.
- * - $footer_attributes: attributes to apply to the footer element.
- * - $links_attributes: attributes such as classes to apply to the nav element.
- * - $is_mobile: Bool, requires the Browscap module to return TRUE for mobile
- *   devices. Use to test for a mobile context.
+ * Omega implementation to display a node.
  *
  * Available variables:
  * - $title: the (sanitized) title of the node.
@@ -90,8 +73,8 @@
  * @see template_preprocess()
  * @see template_preprocess_node()
  * @see template_process()
- * @see adaptivetheme_preprocess_node()
- * @see adaptivetheme_process_node()
+ * @see omega_preprocess_node()
+ * @see omega_process_node()
  */
 
 /**

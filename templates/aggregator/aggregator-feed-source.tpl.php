@@ -1,14 +1,10 @@
 <?php
 /**
  * @file
- * Adativetheme implementation to present the source of the feed.
+ * Omega implementation to present the source of the feed.
  *
  * The contents are rendered above feed listings when browsing source feeds.
  * For example, "example.com/aggregator/sources/1".
- *
- * Adaptivetheme variables:
- * - $is_mobile: Bool, requires the Browscap module to return TRUE for mobile
- *   devices. Use to test for a mobile context.
  *
  * Available variables:
  * - $source_icon: Feed icon linked to the source. Rendered through
