@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * links--menu-footer-bar.theme.inc
+ * links--menu-nav-bar.theme.inc
  */
 
 
@@ -11,7 +11,7 @@
  * @param array $variables
  *   An array of variables to pass to the theme template.
  */
-function wetkit_omega_links__menu_footer_bar($variables) {
+function wetkit_omega_links__menu_menu_wet_header($variables) {
   $links = $variables['links'];
   $attributes = $variables['attributes'];
   $heading = $variables['heading'];
@@ -20,16 +20,16 @@ function wetkit_omega_links__menu_footer_bar($variables) {
 
   // Custom Logic Based on Theme Selection (Internet, Intranet or Base).
   if (variable_get('wetkit_wetboew_theme', 0) == 1) {
-    $theme_prefix = 'gcwu';
+    $theme_prefix = 'gcwu-gcnb';
   }
   elseif (variable_get('wetkit_wetboew_theme', 0) == 2) {
-    $theme_prefix = 'gcwu';
+    $theme_prefix = 'gcwu-gcnb';
   }
   elseif (variable_get('wetkit_wetboew_theme', 0) == 3) {
-    $theme_prefix = 'base';
+    $theme_prefix = 'base-gcnb';
   }
   else {
-    $theme_prefix = 'wet';
+    $theme_prefix = 'wet-fullhd-lang-';
   }
 
   if (count($links) > 0) {
@@ -60,6 +60,7 @@ function wetkit_omega_links__menu_footer_bar($variables) {
 
     foreach ($links as $key => $link) {
       $class = array($key);
+
       // Add first, last and active classes to the list of links to help out
       // themers.
       if ($i == 1) {
@@ -71,24 +72,11 @@ function wetkit_omega_links__menu_footer_bar($variables) {
       if (isset($link['href']) && ($link['href'] == $_GET['q'] || ($link['href'] == '<front>' && drupal_is_front_page())) && (empty($link['language']) || $link['language']->language == $language_url->language)) {
         $class[] = 'active';
       }
-      // Custom Override is here for last link.
-      if ($i == $num_links) {
-        $output .= '<li id="' . $theme_prefix . '-gcft-ca"' . drupal_attributes(array('class' => $class)) . '><div>';
-      }
-      else {
-        $output .= '<li' . drupal_attributes(array('class' => $class)) . '>';
-      }
+      $output .= '<li id="' . $theme_prefix . $i . '"' . drupal_attributes(array('class' => $class)) . '>';
+
       if (isset($link['href'])) {
         // Pass in $link as $options, they share the same keys.
-        // Custom Override is here.
-        if (isset($link['attributes']['title']) && $i != $num_links) {
-          $link['html'] = TRUE;
-          $link['attributes']['rel'] = 'external';
-          $output .= l('<span>' . $link['title'] . '</span>' . '<br />' . $link['attributes']['title'], $link['href'], $link);
-        }
-        else {
-          $output .= l($link['title'], $link['href'], $link);
-        }
+        $output .= l($link['title'], $link['href'], $link);
       }
       elseif (!empty($link['title'])) {
         // Some links are actually not links, but we wrap these in <span> for
@@ -103,16 +91,12 @@ function wetkit_omega_links__menu_footer_bar($variables) {
         $output .= '<span' . $span_attributes . '>' . $link['title'] . '</span>';
       }
 
-      if ($i == $num_links) {
-        $output .= "</div></li>\n";
-      }
-      else {
-        $output .= "</li>\n";
-      }
       $i++;
+      $output .= "</li>\n";
     }
 
     $output .= '</ul>';
   }
+
   return $output;
 }

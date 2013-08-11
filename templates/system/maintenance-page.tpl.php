@@ -12,43 +12,31 @@
  * @see omega_preprocess()
  * @see omega_preprocess_maintenance_page()
  */
-?>
-<!DOCTYPE html>
-<html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>">
+?><!DOCTYPE html>
+<!--[if IE 7]><html<?php print $html_attributes; ?> class="no-js ie7"><![endif]-->
+<!--[if IE 8]><html<?php print $html_attributes; ?> class="no-js ie8"><![endif]-->
+<!--[if gt IE 8]><!--><html<?php print $html_attributes . $rdf_namespaces; ?>><!--<![endif]-->
 <head>
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
-  <?php print $polyfills; ?>
 </head>
-<body class="<?php print $classes; ?>" <?php print $attributes;?>>
-  <?php print $page_top; ?>
-  <div id="page" class="container">
-    <header id="header" class="clearfix" role="banner">
-      <div id="branding" class="branding-elements clearfix">
-        <?php if (!empty($logo)): ?>
-          <div id="logo">
-            <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-          </div>
+<body class="<?php print $classes; ?>"<?php print $attributes; ?>>
+  <div id="<?php print $wetkit_col_array; ?>">
+    <div id="wb-skip">
+      <ul id="wb-tphp">
+        <?php if ($wetkit_skip_link_id_1 && $wetkit_skip_link_text_1): ?>
+          <li id="wb-skip1"><a href="#<?php print $wetkit_skip_link_id_1; ?>"><?php print $wetkit_skip_link_text_1; ?></a></li>
         <?php endif; ?>
-        <?php if ($site_name): ?>
-          <h1 id="site-name">
-            <a href="<?php print $base_path ?>" title="<?php print t('Home page'); ?>" rel="home"><?php print $site_name; ?></a>
-          </h1>
+        <?php if ($wetkit_skip_link_id_2 && $wetkit_skip_link_text_2): ?>
+          <li id="wb-skip2"><a href="#<?php print $wetkit_skip_link_id_2; ?>"><?php print $wetkit_skip_link_text_2; ?></a></li>
         <?php endif; ?>
-      </div>
-    </header>
-    <section id="main-content" role="main">
-      <?php if ($title): ?>
-        <h1 id="page-title"><?php print $title; ?></h1>
-      <?php endif; ?>
-      <?php print $messages; ?>
-      <div id="content">
-        <?php print $content; ?>
-      </div>
-    </section>
+      </ul>
+    </div>
+    <?php print $page_top; ?>
+    <?php print $page; ?>
+    <?php print $page_bottom; ?>
   </div>
-  <?php print $page_bottom ?>
 </body>
 </html>

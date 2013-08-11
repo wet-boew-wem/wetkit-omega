@@ -12,7 +12,7 @@
  * @param array $variables
  *   An array of variables to pass to the theme template.
  */
-function wetkit_omega_links__menu_terms_bar($variables) {
+function wetkit_omega_links__menu_menu_wet_terms($variables) {
   $links = $variables['links'];
   $attributes = $variables['attributes'];
   $heading = $variables['heading'];

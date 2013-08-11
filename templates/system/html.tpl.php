@@ -45,10 +45,10 @@
 <!--[if IE 8]><html<?php print $html_attributes; ?> class="no-js ie8"><![endif]-->
 <!--[if gt IE 8]><!--><html<?php print $html_attributes . $rdf_namespaces; ?>><!--<![endif]-->
 <head>
-<?php print $head; ?>
-<title><?php print $head_title; ?></title>
-<?php print $styles; ?>
-<?php print $scripts; ?>
+  <?php print $head; ?>
+  <title><?php print $head_title; ?></title>
+  <?php print $styles; ?>
+  <?php print $scripts; ?>
 </head>
 <body class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <div id="<?php print $wetkit_col_array; ?>">

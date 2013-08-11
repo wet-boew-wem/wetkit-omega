@@ -117,14 +117,17 @@ function wetkit_omega_preprocess_page(&$variables) {
 
   // Header Navigation + Language Switcher.
   $menu = ($is_multilingual) ? i18n_menu_navigation_links('menu-wet-header') : menu_navigation_links('menu-wet-header');
-  $nav_bar_markup = theme('links__menu_nav_bar', array(
+  $nav_bar_markup = theme('links__menu_menu_wet_header', array(
     'links' => $menu,
     'attributes' => array(
       'id' => 'menu',
       'class' => array('links', 'clearfix'),
     ),
+    'heading' => array(),
   ));
   $nav_bar_markup = strip_tags($nav_bar_markup, '<li><a>');
+
+  // Language Handling
   if (module_exists('wetkit_language')) {
     $language_link_markup = '<li id="' . $theme_menu_prefix . '-lang">' . strip_tags($variables['menu_lang_bar'], '<a><span>') . '</li>';
     if (module_exists('edit')) {
@@ -162,11 +165,12 @@ function wetkit_omega_preprocess_page(&$variables) {
 
   // Terms Navigation.
   $menu = ($is_multilingual) ? i18n_menu_navigation_links('menu-wet-terms') : menu_navigation_links('menu-wet-terms');
-  $terms_bar_markup = theme('links__menu_terms_bar', array(
+  $terms_bar_markup = theme('links__menu_menu_wet_terms', array(
     'links' => $menu,
     'attributes' => array(
       'class' => array('links', 'clearfix'),
     ),
+    'heading' => array(),
   ));
   $variables['menu_terms_bar'] = $terms_bar_markup;
 
@@ -179,7 +183,7 @@ function wetkit_omega_preprocess_page(&$variables) {
 
   // Footer Navigation.
   $menu = ($is_multilingual) ? i18n_menu_navigation_links('menu-wet-footer') : menu_navigation_links('menu-wet-footer');
-  $footer_bar_markup = theme('links__menu_footer_bar', array(
+  $footer_bar_markup = theme('links__menu_menu_footer_bar', array(
     'links' => $menu,
     'attributes' => array(
       'class' => array('links', 'clearfix'),
