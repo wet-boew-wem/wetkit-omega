@@ -5,7 +5,6 @@
  */
 
 
-
 /**
  * Override or insert variables into the theme links templates.
  *
