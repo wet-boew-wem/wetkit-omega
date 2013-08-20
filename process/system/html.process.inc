@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * html.process.inc
+ */
 
 /**
  * Implements hook_process_html().

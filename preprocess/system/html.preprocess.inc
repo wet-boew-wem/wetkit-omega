@@ -11,13 +11,13 @@
 function wetkit_omega_preprocess_html(&$variables) {
   global $theme_key, $language;
 
-  // Modify html attributes for WET.
+  // Modify html attributes
   $variables['html_attributes_array']['lang'][] = $language->language;
   $variables['html_attributes_array']['dir'][] = $language->dir;
 
   unset($variables['html_attributes_array']['dir']);
 
-  // Add the default body id needed for WET.
+  // Add the default body id needed
   // WetKit Layouts may have already set this variable.
   if (empty($variables['wetkit_col_array'])) {
     $variables['wetkit_col_array'] = 'wb-body';
@@ -25,10 +25,6 @@ function wetkit_omega_preprocess_html(&$variables) {
 
   // Add a body class for the active theme name.
   $variables['classes_array'][] = drupal_html_class($theme_key);
-
-  // Browser/platform sniff - adds body classes such as ipad, webkit, chrome
-  // TODO
-  // $variables['classes_array'][] = css_browser_selector();
 
   // Assign skip link variables.
   $variables['wetkit_skip_link_id_1'] = omega_theme_get_setting('wetkit_skip_link_id_1');

@@ -190,4 +190,9 @@ function wetkit_omega_preprocess_page(&$variables) {
     ),
   ));
   $variables['menu_footer_bar'] = $footer_bar_markup;
+
+  // Footer attributes
+  $variables['footer_attributes_array']['id'][] = 'footer';
+  $variables['footer_attributes_array']['class'][] = 'clearfix';
+  $variables['footer_attributes_array']['role'][] = 'contentinfo';
 }

@@ -31,4 +31,9 @@ function wetkit_omega_preprocess_node(&$variables) {
   }
   $node = $variables['node'];
   $variables['date'] = format_date($node->changed, 'custom', 'Y-m-d');
+
+  $variables['footer_attributes_array']['class'][] = 'submitted';
+  if ($variables['user_picture']) {
+    $variables['footer_attributes_array']['class'][] = 'with-user-picture';
+  }
 }
