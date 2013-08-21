@@ -1,4 +1,3 @@
-/* Utilities */
 .clearfix {
   /* for IE 6/7 */
   *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
@@ -15,24 +14,28 @@
   clear: both;
 }
 
-/* Base Elements */
 img, media {
   max-width: 100%;
 }
 
-/* Components (Modules) */
-/* Drupal Core: Block */
+/* =============================================================================
+   Block
+   ========================================================================== */
 .block-content #tasks .tabs li a {
   top: 0px;
   margin-top: 0px;
 }
 
-/* Drupal Core: Contextual */
+/* =============================================================================
+   Contextual
+   ========================================================================== */
 .contextual-links-wrapper {
   z-index: 10;
 }
 
-/* Drupal Contrib: Custom Search */
+/* =============================================================================
+   Custom Search
+   ========================================================================== */
 .custom_search-popup {
   z-index: 99 !important;
   width: 198px;
@@ -54,7 +57,9 @@ img, media {
   display: inline;
 }
 
-/* Drupal Contrib: Diff */
+/* =============================================================================
+   Diff
+   ========================================================================== */
 .page-node-revisions #block-system-main .diff-section-title,
 .page-node-moderation #block-system-main .diff-section-title {
   margin: 0px 10px;
@@ -81,7 +86,9 @@ img, media {
   background: #aaffaa;
 }
 
-/* Drupal Core: Field */
+/* =============================================================================
+   Field
+   ========================================================================== */
 .field-label-inline .field-label {
   margin: 0;
 }
@@ -90,7 +97,9 @@ img, media {
   float: none;
 }
 
-/* Drupal Contrib: Navbar */
+/* =============================================================================
+   Navbar
+   ========================================================================== */
 .navbar-horizontal .tab a .ui-link:visited,
 .navbar-vertical .tab a .ui-link:visited,
 .navbar-tray-open .tab a .ui-link:visited {
@@ -101,7 +110,9 @@ img, media {
   position: relative;
 }
 
-/* Drupal Core: Node */
+/* =============================================================================
+   Node
+   ========================================================================== */
 html.js .page-node-add fieldset.collapsed, html.js .page-node-edit fieldset.collapsed {
   border-width: 1px;
   height: auto;
@@ -138,12 +149,16 @@ html.js .page-node-edit .pane-page-tabs #tabs {
   display: inline;
 }
 
-/* Drupal Contrib: Open Layers */
+/* =============================================================================
+   Open Layers
+   ========================================================================== */
 .gmap img, .view-gmap img, .openlayers-map img, #getlocations_map_canvas img {
   max-width: none;
 }
 
-/* Drupal Contrib: Panels */
+/* =============================================================================
+   Panels
+   ========================================================================== */
 .pane-node-field-application-developer h2, .pane-node-field-application-categories h2,
 .pane-node-field-departments h2, .pane-node-field-device-formats h2 {
   margin: 0px;
@@ -194,7 +209,9 @@ html.js .page-node-edit .pane-page-tabs #tabs {
   color: white;
 }
 
-/* Drupal Core: Search */
+/* =============================================================================
+   Search
+   ========================================================================== */
 .search-form #edit-actions {
   display: inline;
 }
@@ -202,7 +219,9 @@ html.js .page-node-edit .pane-page-tabs #tabs {
   display: inline;
 }
 
-/* Drupal Core: System */
+/* =============================================================================
+   System
+   ========================================================================== */
 figure {
   display: block;
   margin: 0px;
@@ -247,13 +266,17 @@ ul.tabs {
   font-weight: normal;
 }
 
-/* Drupal Core: User */
+/* =============================================================================
+   User
+   ========================================================================== */
 .profile dl {
   margin-left: 10px;
   margin-right: 10px;
 }
 
-/* Drupal Contrib: Views Responsive Grids */
+/* =============================================================================
+   Views Responsive Grid
+   ========================================================================== */
 .views-responsive-grid img {
   width: auto !important;
   height: auto;
@@ -265,7 +288,9 @@ ul.tabs {
   padding-bottom: 10px;
 }
 
-/* Drupal Contrib: WetKit */
+/* =============================================================================
+   WetKit
+   ========================================================================== */
 .gcwu-minister {
   margin-top: 10px;
 }
@@ -441,7 +466,9 @@ ul.tabs {
   margin-top: 6px;
 }
 
-/* Drupal Contrib: Workbench */
+/* =============================================================================
+   Workbench
+   ========================================================================== */
 #block-workbench-block .workbench-info-block {
   margin: 0px 10px 10px 10px;
   background-color: #ffffce !important;
