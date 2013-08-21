@@ -176,18 +176,20 @@ function wetkit_omega_preprocess_page(&$variables) {
 
   // Mid Footer Region.
   if (module_exists('menu_block')) {
-    $config = menu_block_get_config('footer_menu');
+    $config = menu_block_get_config('mid_footer_menu');
     $data = menu_tree_build($config);
     $variables['page']['footer'] = $data['content'];
   }
 
   // Footer Navigation.
   $menu = ($is_multilingual) ? i18n_menu_navigation_links('menu-wet-footer') : menu_navigation_links('menu-wet-footer');
-  $footer_bar_markup = theme('links__menu_menu_footer_bar', array(
+  $footer_bar_markup = theme('links__menu_menu_wet_footer', array(
     'links' => $menu,
     'attributes' => array(
+      'id' => 'menu',
       'class' => array('links', 'clearfix'),
     ),
+    'heading' => array(),
   ));
   $variables['menu_footer_bar'] = $footer_bar_markup;
 
