@@ -216,7 +216,7 @@ html.js .page-node-edit label[for="edit-language"] {
   display: inline;
 }
 html.js .page-node-edit .pane-page-tabs ul.tabs {
-  margin: 0px 0px;
+  margin: 0px 0px 10px 0px;
 }
 html.js .page-node-edit .pane-page-tabs #tabs {
   margin: 0px 0px 0px 0px;
