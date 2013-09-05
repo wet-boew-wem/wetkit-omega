@@ -15,9 +15,11 @@ function wetkit_omega_preprocess_page(&$variables) {
   $variables['secondary_local_tasks'] = menu_secondary_local_tasks();
 
   // Site name
-  $variables['site_name_title'] = variable_get('site_name', 'Drupal');
-  $variables['site_name'] = l($variables['site_name_title'], '<front>', array('attributes' => array('title' => t('Home page'))));
-  $variables['site_name_unlinked'] = $variables['site_name_title'];
+  if (!empty($variables['site_name'])) {
+    $variables['site_name_title'] = variable_get('site_name', 'Drupal');
+    $variables['site_name'] = l($variables['site_name_title'], '<front>', array('attributes' => array('title' => t('Home page'))));
+    $variables['site_name_unlinked'] = $variables['site_name_title'];
+  }
 
   if (module_exists('page_manager')) {
     // Page template suggestions for Panels pages.
@@ -73,8 +75,10 @@ function wetkit_omega_preprocess_page(&$variables) {
   }
   else {
     $theme_prefix = 'wet';
-    $variables['site_name_frontpage'] = '/' . variable_get('site_frontpage', 'node');
-    $variables['site_name'] = $variables['site_name_title'];
+    if (!empty($variables['site_name'])) {
+      $variables['site_name_frontpage'] = '/' . variable_get('site_frontpage', 'node');
+      $variables['site_name'] = $variables['site_name_title'];
+    }
   }
 
   // Custom Logic Based on Theme Selection.
