@@ -10,6 +10,8 @@
  */
 function wetkit_omega_preprocess_page(&$variables) {
 
+  global $language;
+
   // Build variables for Primary and Secondary local tasks
   $variables['primary_local_tasks'] = menu_primary_local_tasks();
   $variables['secondary_local_tasks'] = menu_secondary_local_tasks();
@@ -66,9 +68,29 @@ function wetkit_omega_preprocess_page(&$variables) {
   // Custom Logic Based on Theme Selection.
   if (variable_get('wetkit_wetboew_theme', 0) == 1) {
     $theme_prefix = 'gcwu';
+    if ($language->language == 'en') {
+      $variables['site_logo'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-fegc/images/sig-eng.svg';
+      $variables['site_logo_alt'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-fegc/images/sig-eng.png';
+    }
+    if ($language->language == 'fr') {
+      $variables['site_logo'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-fegc/images/sig-fra.svg';
+      $variables['site_logo_alt'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-fegc/images/sig-fra.png';
+    }
+    $variables['wmms'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-fegc/images/wmms.svg';
+    $variables['wmms_alt'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-fegc/images/wmms.png';
   }
   elseif (variable_get('wetkit_wetboew_theme', 0) == 2) {
     $theme_prefix = 'gcwu';
+    if ($language->language == 'en') {
+      $variables['site_logo'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-intranet/images/sig-blk-eng.svg';
+      $variables['site_logo_alt'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-intranet/images/sig-eng.png';
+    }
+    if ($language->language == 'fr') {
+      $variables['site_logo'] = libraries_get_path('wet-boew', TRUE) . 'dist/theme-gcwu-intranet/images/sig-blk-fra.svg';
+      $variables['site_logo_alt'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-intranet/images/sig-fra.png';
+    }
+    $variables['wmms'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-intranet/images/wmms-intra.svg';
+    $variables['wmms_alt'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-intranet/images/wmms.png';
   }
   elseif (variable_get('wetkit_wetboew_theme', 0) == 3) {
     $theme_prefix = 'base';
