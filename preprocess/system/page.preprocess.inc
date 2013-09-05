@@ -76,9 +76,11 @@ function wetkit_omega_preprocess_page(&$variables) {
   else {
     $theme_prefix = 'wet';
     if (!empty($variables['site_name'])) {
-      $variables['site_name_frontpage'] = '/' . variable_get('site_frontpage', 'node');
+      $variables['site_frontpage'] = '/' . variable_get('site_frontpage', 'node');
       $variables['site_name'] = $variables['site_name_title'];
     }
+    $variables['site_logo'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-wet-boew/images/logo.svg';
+    $variables['site_logo_alt'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-wet-boew/images/logo.png';
   }
 
   // Custom Logic Based on Theme Selection.

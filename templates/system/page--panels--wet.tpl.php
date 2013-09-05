@@ -102,9 +102,9 @@
               <div id="wet-title">
                 <?php if ($site_name): ?>
                   <p id="wet-title-in">
-                    <a href="<?php print $site_name_frontpage; ?>">
-                      <object data="<?php print (base_path() . libraries_get_path('wet-boew'));?>/dist/theme-wet-boew/images/logo.svg" role="img" tabindex="-1" type="image/svg+xml">
-                        <img src="<?php print (base_path() . libraries_get_path('wet-boew'));?>/dist/theme-wet-boew/images/logo.png" alt="" />
+                    <a href="<?php print $site_frontpage; ?>">
+                      <object data="<?php print $site_logo; ?>" role="img" tabindex="-1" type="image/svg+xml">
+                        <img src="<?php print $site_logo_alt; ?>" alt="WxT Logo" />
                       </object>
                       <span><?php print $site_name; ?></span>
                     </a>
