@@ -96,20 +96,11 @@
               <div id="gcwu-gcnb-fip">
                 <div id="gcwu-sig">
                   <div id="gcwu-sig-in">
-                    <?php if ($language->language == 'en'): ?>
-                      <div id="gcwu-sig-eng" title="Government of Canada">
-                        <object data="<?php print $site_logo; ?>" role="img" tabindex="-1" aria-label="Government of Canada" type="image/svg+xml">
-                          <img src="<?php print $site_logo_alt; ?>" alt="Government of Canada" />
-                        </object>
-                      </div>
-                    <?php endif;?>
-                    <?php if ($language->language == 'fr'): ?>
-                      <div id="gcwu-sig-fra" title="Gouvernement du Canada">
-                        <object data="<?php print $site_logo; ?>" role="img" tabindex="-1" aria-label="Gouvernement du Canada" type="image/svg+xml">
-                          <img src="<?php print $site_logo_alt; ?>" alt="Gouvernement du Canada" />
-                        </object>
-                      </div>
-                    <?php endif;?>
+                    <div id="gcwu-sig-<?php print $language_suffix; ?>" title="<?php print t('Government of Canada'); ?>">
+                      <object data="<?php print $logo_svg; ?>" role="img" tabindex="-1" aria-label="<?php print t('Government of Canada'); ?>" type="image/svg+xml">
+                        <img src="<?php print $logo; ?>" alt="<?php print t('Government of Canada'); ?>" />
+                      </object>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -120,16 +111,9 @@
           <div id="gcwu-bnr-in">
             <div id="gcwu-wmms">
               <div id="gcwu-wmms-in">
-                <?php if ($language->language == 'en'): ?>
-                  <object data="<?php print $wmms; ?>" role="img" tabindex="-1" aria-label="Symbol of the Government of Canada" type="image/svg+xml">
-                    <img src="<?php print $wmms_alt; ?>" alt="Symbol of the Government of Canada" />
-                  </object>
-                <?php endif;?>
-                <?php if ($language->language == 'fr'): ?>
-                  <object data="<?php print $wmms; ?>" role="img" tabindex="-1" aria-label="Symbole du gouvernement du Canada" type="image/svg+xml">
-                    <img src="<?php print $wmms_alt; ?>" alt="Symbole du gouvernement du Canada" />
-                  </object>
-                <?php endif;?>
+                <object data="<?php print $wmms; ?>" role="img" tabindex="-1" aria-label="<?php print t('Symbol of the Government of Canada'); ?>" type="image/svg+xml">
+                  <img src="<?php print $wmms_alt; ?>" alt="<?php print t('Symbol of the Government of Canada'); ?>" />
+                </object>
               </div>
             </div>
             <?php if ($site_name || $site_slogan): ?>

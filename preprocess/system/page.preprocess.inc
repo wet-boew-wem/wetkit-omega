@@ -66,63 +66,85 @@ function wetkit_omega_preprocess_page(&$variables) {
   }
 
   // Custom Logic Based on Theme Selection.
+
+  // Internet Theme
   if (variable_get('wetkit_wetboew_theme', 0) == 1) {
     $theme_prefix = 'gcwu';
-    if ($language->language == 'en') {
-      $variables['site_logo'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-fegc/images/sig-eng.svg';
-      $variables['site_logo_alt'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-fegc/images/sig-eng.png';
+    $theme_menu_prefix = 'gcwu-gcnb';
+
+    // Default Logo logic.
+    if (theme_get_setting('default_logo') == 1) {
+      if ($language->language == 'en') {
+       $variables['logo_svg'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-fegc/images/sig-eng.svg';
+       $variables['logo'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-fegc/images/sig-eng.png';
+      }
+      if ($language->language == 'fr') {
+        $variables['logo_svg'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-fegc/images/sig-fra.svg';
+        $variables['logo'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-fegc/images/sig-fra.png';
+      }
     }
-    if ($language->language == 'fr') {
-      $variables['site_logo'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-fegc/images/sig-fra.svg';
-      $variables['site_logo_alt'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-fegc/images/sig-fra.png';
-    }
+
+    // WMMS Logic.
     $variables['wmms'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-fegc/images/wmms.svg';
     $variables['wmms_alt'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-fegc/images/wmms.png';
   }
+  // Intranet Theme
   elseif (variable_get('wetkit_wetboew_theme', 0) == 2) {
     $theme_prefix = 'gcwu';
-    if ($language->language == 'en') {
-      $variables['site_logo'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-intranet/images/sig-blk-eng.svg';
-      $variables['site_logo_alt'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-intranet/images/sig-eng.png';
+    $theme_menu_prefix = 'gcwu-gcnb';
+
+    // Default Logo logic.
+    if (theme_get_setting('default_logo') == 1) {
+      if ($language->language == 'en') {
+        $variables['logo_svg'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-intranet/images/sig-blk-eng.svg';
+        $variables['logo'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-intranet/images/sig-eng.png';
+      }
+      if ($language->language == 'fr') {
+        $variables['logo_svg'] = libraries_get_path('wet-boew', TRUE) . 'dist/theme-gcwu-intranet/images/sig-blk-fra.svg';
+        $variables['logo'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-intranet/images/sig-fra.png';
+      }
     }
-    if ($language->language == 'fr') {
-      $variables['site_logo'] = libraries_get_path('wet-boew', TRUE) . 'dist/theme-gcwu-intranet/images/sig-blk-fra.svg';
-      $variables['site_logo_alt'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-intranet/images/sig-fra.png';
-    }
+
+    // WMMS Logic.
     $variables['wmms'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-intranet/images/wmms-intra.svg';
     $variables['wmms_alt'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-intranet/images/wmms.png';
   }
+  // Base Theme
   elseif (variable_get('wetkit_wetboew_theme', 0) == 3) {
     $theme_prefix = 'base';
+    $theme_menu_prefix = 'base-gcnb';
+
+    // TODO: Logic for images for Base Theme.
   }
+  // WET Theme
   else {
     $theme_prefix = 'wet';
+    $theme_menu_prefix = 'wet-fullhd';
+
+    // Site Name logic.
     if (!empty($variables['site_name'])) {
       $variables['site_frontpage'] = '/' . variable_get('site_frontpage', 'node');
       $variables['site_name'] = $variables['site_name_title'];
     }
-    $variables['site_logo'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-wet-boew/images/logo.svg';
-    $variables['site_logo_alt'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-wet-boew/images/logo.png';
+
+    // Default Logo logic.
+    if (theme_get_setting('default_logo') == 1) {
+      $variables['logo_svg'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-wet-boew/images/logo.svg';
+      $variables['logo'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-wet-boew/images/logo.png';
+    }
   }
 
-  // Custom Logic Based on Theme Selection.
-  if (variable_get('wetkit_wetboew_theme', 0) == 1) {
-    $theme_menu_prefix = 'gcwu-gcnb';
-  }
-  elseif (variable_get('wetkit_wetboew_theme', 0) == 2) {
-    $theme_menu_prefix = 'gcwu-gcnb';
-  }
-  elseif (variable_get('wetkit_wetboew_theme', 0) == 3) {
-    $theme_menu_prefix = 'base-gcnb';
-  }
-  else {
-    $theme_menu_prefix = 'wet-fullhd';
-  }
-
-  // Internationalization Check.
+  // Internationalization Settings.
   $is_multilingual = 0;
   if (module_exists('i18n_menu') && drupal_multilingual()) {
     $is_multilingual = 1;
+  }
+
+  if ($language->language == 'en') {
+    $variables['language_suffix'] = 'eng';
+  }
+  else {
+    $variables['language_suffix'] = 'fra';
   }
 
   // Assign an alternate Site URL.

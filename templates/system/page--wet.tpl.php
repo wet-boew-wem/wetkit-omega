@@ -104,7 +104,7 @@
                     <?php if ($site_name || $logo): ?>
                       <a href="<?php print $site_frontpage; ?>">
                         <?php if ($logo): ?>
-                          <object id="header-logo" data='<?php print $wetkit_theme; ?>' role="img" tabindex="-1" type="image/svg+xml">
+                          <object id="header-logo" data='<?php print $logo_svg; ?>' role="img" tabindex="-1" type="image/svg+xml">
                             <img alt="<?php print t('WxT Logo'); ?>" src="<?php print $logo; ?>"  />
                           </object>
                         <?php endif; ?>
