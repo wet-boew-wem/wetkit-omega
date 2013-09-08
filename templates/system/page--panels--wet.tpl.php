@@ -98,18 +98,22 @@
         </section>
         <div id="wet-bnr">
           <div id="wet-bnr-in">
-            <?php if ($site_name || $site_slogan): ?>
+            <?php if ($site_name || $site_slogan || $logo): ?>
               <div id="wet-title">
-                <?php if ($site_name): ?>
                   <p id="wet-title-in">
-                    <a href="<?php print $site_frontpage; ?>">
-                      <object data="<?php print $site_logo; ?>" role="img" tabindex="-1" type="image/svg+xml">
-                        <img src="<?php print $site_logo_alt; ?>" alt="WxT Logo" />
-                      </object>
-                      <span><?php print $site_name; ?></span>
-                    </a>
+                    <?php if ($site_name || $logo): ?>
+                      <a href="<?php print $site_frontpage; ?>">
+                        <?php if ($logo): ?>
+                          <object id="header-logo" data='<?php print $wetkit_theme; ?>' role="img" tabindex="-1" type="image/svg+xml">
+                            <img alt="<?php print t('WxT Logo'); ?>" src="<?php print $logo; ?>"  />
+                          </object>
+                        <?php endif; ?>
+                        <?php if ($site_name): ?>
+                          <span><?php print $site_name; ?></span>
+                        <?php endif; ?>
+                      </a>
+                    <?php endif; ?>
                   </p>
-                <?php endif; ?>
                 <?php if ($site_slogan): ?>
                   <h2 id="site-slogan"<?php print $site_slogan_attributes; ?>><?php print $site_slogan; ?></h2>
                 <?php endif; ?>
