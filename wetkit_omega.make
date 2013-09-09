@@ -29,7 +29,7 @@ api = 2
 projects[omega][version] = 4.x-dev
 projects[omega][type] = theme
 projects[omega][download][type] = git
-projects[omega][download][revision] = e68542d
+projects[omega][download][revision] = e9d7f50
 projects[omega][download][branch] = 7.x-4.x
 
 ; Libraries
