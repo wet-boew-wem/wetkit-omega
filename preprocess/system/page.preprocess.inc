@@ -12,11 +12,16 @@ function wetkit_omega_preprocess_page(&$variables) {
 
   global $language;
 
-  // Build variables for Primary and Secondary local tasks
+  // Build variables for Primary and Secondary local tasks.
   $variables['primary_local_tasks'] = menu_primary_local_tasks();
   $variables['secondary_local_tasks'] = menu_secondary_local_tasks();
 
-  // Site name
+  // Header attributes.
+  $variables['header_attributes_array']['id'][] = 'header';
+  $variables['header_attributes_array']['class'][] = 'clearfix';
+  $variables['header_attributes_array']['role'][] = 'banner';
+
+  // Site name.
   if (!empty($variables['site_name'])) {
     $variables['site_name_title'] = variable_get('site_name', 'Drupal');
     $variables['site_name'] = l($variables['site_name_title'], '<front>', array('attributes' => array('title' => t('Home page'))));

@@ -32,8 +32,11 @@ function wetkit_omega_preprocess_node(&$variables) {
   $node = $variables['node'];
   $variables['date'] = format_date($node->changed, 'custom', 'Y-m-d');
 
+  // Header, submitted and links wrappers have their own attributes.
+  $variables['header_attributes_array']['class'][] = 'node-header';
   $variables['footer_attributes_array']['class'][] = 'submitted';
   if ($variables['user_picture']) {
     $variables['footer_attributes_array']['class'][] = 'with-user-picture';
   }
+  $variables['links_attributes_array']['class'][] = 'clearfix';
 }
