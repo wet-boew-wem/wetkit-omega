@@ -34,14 +34,14 @@ projects[omega][download][branch] = 7.x-4.x
 
 ; Libraries
 
-libraries[selectivizr][download][type] = "file"
-libraries[selectivizr][download][url] = "http://selectivizr.com/downloads/selectivizr-1.0.2.zip"
+;libraries[selectivizr][download][type] = "file"
+;libraries[selectivizr][download][url] = "http://selectivizr.com/downloads/selectivizr-1.0.2.zip"
 
-libraries[html5shiv][download][type] = "file"
-libraries[html5shiv][download][url] = "https://github.com/aFarkas/html5shiv/master/dist/html5shiv.js"
+;libraries[html5shiv][download][type] = "file"
+;libraries[html5shiv][download][url] = "https://github.com/aFarkas/html5shiv/master/dist/html5shiv.js"
 
-libraries[respond][download][type] = "file"
-libraries[respond][download][url] = "https://github.com/scottjehl/Respond/tarball/master"
+;libraries[respond][download][type] = "file"
+;libraries[respond][download][url] = "https://github.com/scottjehl/Respond/tarball/master"
 
 ;libraries[matchmedia][download][type] = "file"
 ;libraries[matchmedia][download][url] = "https://github.com/fubhy/matchmedia/archive/master.zip"
