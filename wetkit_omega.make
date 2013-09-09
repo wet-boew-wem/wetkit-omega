@@ -29,7 +29,7 @@ api = 2
 projects[omega][version] = 4.x-dev
 projects[omega][type] = theme
 projects[omega][download][type] = git
-projects[omega][download][revision] = e68542d
+projects[omega][download][revision] = 3bc8b04
 projects[omega][download][branch] = 7.x-4.x
 
 ; Libraries
@@ -38,7 +38,7 @@ libraries[selectivizr][download][type] = "file"
 libraries[selectivizr][download][url] = "http://selectivizr.com/downloads/selectivizr-1.0.2.zip"
 
 libraries[html5shiv][download][type] = "file"
-libraries[html5shiv][download][url] = "https://github.com/aFarkas/html5shiv/archive/3.6.2.zip"
+libraries[html5shiv][download][url] = "https://github.com/aFarkas/html5shiv/master/dist/html5shiv.js"
 
 libraries[respond][download][type] = "file"
 libraries[respond][download][url] = "https://github.com/scottjehl/Respond/tarball/master"
