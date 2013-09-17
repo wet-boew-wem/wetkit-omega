@@ -6,11 +6,14 @@
 ## file for more information.
 ##
 
-# Set the Environment Variable
-# Using :development enables the use of FireSass but will bloat the stylesheets
-# with debug code, be sure to change to :production when moving from development
-# to production servers.
+# Default to development if environment is not set.
 environment = :production
+saved = environment
+if (environment.nil?)
+  environment = :development
+else
+  environment = saved
+end
 
 # Location of the theme's resources.
 css_dir = "css"
@@ -24,6 +27,7 @@ require 'compass-normalize'
 require 'rgbapng'
 require 'toolkit'
 require 'susy'
+require 'sass-globbing'
 
 ##
 ## You probably don't need to edit anything below this.
@@ -31,7 +35,7 @@ require 'susy'
 
 # You can select your preferred output style here (:expanded, :nested, :compact
 # or :compressed).
-output_style = (environment == :production) ? :expanded : :expanded
+output_style = (environment == :production) ? :expanded : :nested
 
 # To enable relative paths to assets via compass helper functions. Since Drupal
 # themes can be installed in multiple locations, we don't need to worry about
@@ -43,3 +47,6 @@ line_comments = (environment == :production) ? false : true
 
 # Output debugging info in development mode.
 sass_options = (environment == :production) ? {} : {:debug_info => true}
+
+# Add the 'sass' directory itself as an import path to ease imports.
+add_import_path 'sass'

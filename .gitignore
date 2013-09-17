@@ -4,6 +4,9 @@ node_modules
 # We absolutely don't want to have the .sass-cache in git.
 .sass-cache
 
+# We don't want to commit libraries.
+libraries
+
 # Ignore Development Files
 compass_app_log.txt
 *.DS_Store

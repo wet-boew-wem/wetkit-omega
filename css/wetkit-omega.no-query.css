@@ -1,19 +1,4 @@
-.clearfix {
-  /* for IE 6/7 */
-  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
-  /* non-JS fallback */
-  *zoom: 1;
-}
-.clearfix:before, .clearfix:after {
-  content: ".";
-  display: block;
-  height: 0;
-  overflow: hidden;
-}
-.clearfix:after {
-  clear: both;
-}
-
+/* No files to import found in abstractions/**\/* */
 img, media {
   max-width: 100%;
 }

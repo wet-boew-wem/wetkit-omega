@@ -4,4 +4,4 @@ preview = wetkit.png
 template = wetkit-layout
 
 ; Regions
-regions[content]        = Content
+regions[content] = Content
