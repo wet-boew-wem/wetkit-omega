@@ -83,7 +83,7 @@ function wetkit_omega_pager($variables) {
       if ($i > 1) {
         $items[] = array(
           'class' => array('pager-ellipsis'),
-          'data' => 'â€¦',
+          'data' => '…',
         );
       }
       // Now generate the actual pager piece.
@@ -96,8 +96,8 @@ function wetkit_omega_pager($variables) {
         }
         if ($i == $pager_current) {
           $items[] = array(
-            'class' => array('pager-current button button-small button-attention button-disabled'),
-            'data' => $i,
+            'class' => array('pager-current'),
+            'data' => '<span class="button button-small button-attention button-disabled ui-disabled">' . $i . '</span>',
           );
         }
         if ($i > $pager_current) {
@@ -127,9 +127,9 @@ function wetkit_omega_pager($variables) {
         'data' => $li_last,
       );
     }
-    return '<h2 class="element-invisible">' . t('Pages') . '</h2>' . theme('item_list', array(
+    return '<div class="pager-container"><h2 class="element-invisible">' . t('Pages') . '</h2>' . theme('item_list', array(
       'items' => $items,
-      'attributes' => array('class' => array('pager')),
-    ));
+      'attributes' => array('class' => array('pager menu-horizontal')),
+    )) . '</div>';
   }
 }
