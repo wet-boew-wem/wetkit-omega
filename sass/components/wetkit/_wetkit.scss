@@ -172,6 +172,12 @@
       fieldset { background-color: #f8f8f8; }
     }
   }
+  .horizontal-tabs {
+    .horizontal-tab-hidden {
+      display: block;
+      position: absolute;
+    }
+  }
   #gcwu-connect {
     margin-left: 0px;
     h2 {

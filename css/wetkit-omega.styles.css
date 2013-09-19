@@ -532,6 +532,10 @@ ul.tabs {
 #wb-main-in fieldset fieldset fieldset {
   background-color: #f8f8f8;
 }
+#wb-main-in .horizontal-tabs .horizontal-tab-hidden {
+  display: block;
+  position: absolute;
+}
 #wb-main-in #gcwu-connect {
   margin-left: 0px;
 }
