@@ -115,4 +115,3 @@ function wetkit_omega_extension_wetkit_settings_form($element, &$form, $form_sta
   );
   return $element;
 }
-

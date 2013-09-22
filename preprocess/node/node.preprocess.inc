@@ -8,7 +8,7 @@
 /**
  * Implements hook_preprocess_node().
  */
-function wetkit_omega_preprocess_node(&$variables) {
+function wetkit_omega_preprocess_node(&$variables, $hook) {
   // Optionally, run node-type-specific preprocess functions, like
   // wetkit_omega_preprocess_node_page() or
   // wetkit_omega_preprocess_node_story().

@@ -33,5 +33,5 @@ function wetkit_omega_current_search_link_active($variables) {
   // link text and are providing additional markup for accessibility.
   $variables['text'] .= ' ' . $accessible_markup;
   $variables['options']['html'] = TRUE;
-  return theme_link($variables);
+  return theme('link', $variables);
 }

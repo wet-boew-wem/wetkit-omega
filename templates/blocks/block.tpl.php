@@ -54,4 +54,3 @@
     <?php print $content; ?>
   </div>
 </div>
-

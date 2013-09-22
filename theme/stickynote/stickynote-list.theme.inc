@@ -35,6 +35,6 @@ function wetkit_omega_stickynote_list($variables) {
       $list['items'][] = array('data' => $item, 'id' => 'note-' . $key);
     }
   }
-  $output = theme_item_list($list);
+  $output = theme('item_list', $list);
   return $output;
 }

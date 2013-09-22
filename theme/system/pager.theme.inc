@@ -5,10 +5,9 @@
  */
 
 
-
 /**
  * Returns HTML for the  pager.
- * @param $variables
+ * @param array $variables
  *   An associative array containing:
  *   - text: The name (or image) of the link.
  *   - element: An optional integer to distinguish between multiple pagers on
@@ -28,13 +27,13 @@ function wetkit_omega_pager($variables) {
   // Calculate various markers within this pager piece:
   // Middle is used to "center" pages around the current page.
   $pager_middle = ceil($quantity / 2);
-  // current is the page we are currently paged to
+  // Current is the page we are currently paged to.
   $pager_current = $pager_page_array[$element] + 1;
-  // first is the first page listed by this pager piece (re quantity)
+  // First is the first page listed by this pager piece (re quantity).
   $pager_first = $pager_current - $pager_middle + 1;
-  // last is the last page listed by this pager piece (re quantity)
+  // Last is the last page listed by this pager piece (re quantity).
   $pager_last = $pager_current + $quantity - $pager_middle;
-  // max is the maximum page number
+  // Max is the maximum page number.
   $pager_max = $pager_total[$element];
   // End of marker calculations.
 

@@ -8,7 +8,7 @@
 /**
  * Theme the webform element.
  *
- * @param array $vars
+ * @param array $variables
  *   The array used to modify the panels ipe placeholder pane.
  */
 function wetkit_omega_webform_element($variables) {

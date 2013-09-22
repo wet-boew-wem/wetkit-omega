@@ -8,7 +8,7 @@
 /**
  * Returns HTML for the "previous page" link in a query pager.
  *
- * @param $variables
+ * @param array $variables
  *   An associative array containing:
  *   - text: The name (or image) of the link.
  *   - element: An optional integer to distinguish between multiple pagers on
@@ -24,14 +24,14 @@ function wetkit_omega_pager_previous($variables) {
   $element = $variables['element'];
   $interval = $variables['interval'];
   $parameters = $variables['parameters'];
-    if (!isset($variables['attributes'])){
+    if (!isset($variables['attributes'])) {
     $variables['attributes'] = array();
   }
   $attributes = $variables['attributes'];
   global $pager_page_array;
   $output = '';
 
-  // If we are anywhere but the first page
+  // If we are anywhere but the first page.
   if ($pager_page_array[$element] > 0) {
     $page_new = pager_load_array($pager_page_array[$element] - $interval, $element, $pager_page_array);
 

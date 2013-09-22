@@ -13,7 +13,7 @@
  * for themers. Additionally .crumb, .crumb-first and .crumb-last classes are
  * printed on the li elements.
  *
- * @param array $vars
+ * @param array $variables
  *   An associative array containing:
  *   - breadcrumb: An array containing the breadcrumb links.
  */

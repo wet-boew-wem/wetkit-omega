@@ -11,7 +11,7 @@
 function wetkit_omega_preprocess_html(&$variables) {
   global $theme_key, $language;
 
-  // Modify html attributes
+  // Modify html attributes.
   $variables['html_attributes_array']['lang'][] = $language->language;
   $variables['html_attributes_array']['dir'][] = $language->dir;
 
