@@ -1,10 +1,15 @@
-# Ignore the node modules folder (created by 'npm install').
+# Node
 node_modules
 
-# We absolutely don't want to have the .sass-cache in git.
+# SASS
 .sass-cache
 
-# Ignore Development Files
+# Bundler
+Gemfile.lock
+bin/*
+.bundle/*
+
+# Development Files
 compass_app_log.txt
 *.DS_Store
 *.diff
@@ -15,8 +20,21 @@ compass_app_log.txt
 *.swo
 *.swp
 *.vi
+.AppleDouble
+.LSOverride
+Icon
 
-# Bundler
-Gemfile.lock
-bin/*
-.bundle/*
+# Thumbnails
+._*
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Linux
+.*
+!.gitignore
+*~
