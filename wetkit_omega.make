@@ -8,5 +8,5 @@ api = 2
 projects[omega][version] = 4.x-dev
 projects[omega][type] = theme
 projects[omega][download][type] = git
-projects[omega][download][revision] = 17d4874
+projects[omega][download][revision] = d1090cb
 projects[omega][download][branch] = 7.x-4.x
