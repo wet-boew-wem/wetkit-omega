@@ -21,6 +21,9 @@ function wetkit_omega_preprocess_page(&$variables) {
   $variables['header_attributes_array']['class'][] = 'clearfix';
   $variables['header_attributes_array']['role'][] = 'banner';
 
+  // Build variable(s) for svg logo.
+  $variables['logo_svg'] = '';
+
   // Site name.
   if (!empty($variables['site_name'])) {
     $variables['site_name_title'] = variable_get('site_name', 'Drupal');
@@ -77,7 +80,7 @@ function wetkit_omega_preprocess_page(&$variables) {
     $theme_menu_prefix = 'gcwu-gcnb';
 
     // Default Logo logic.
-    if (theme_get_setting('default_logo') == 1) {
+    if ((theme_get_setting('default_logo', 'wetkit_omega') == 0) && (theme_get_setting('wetkit_theme_svg_default_logo', 'wetkit_omega') == 1)) {
       if ($language->language == 'en') {
         $variables['logo_svg'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-fegc/images/sig-eng.svg';
         $variables['logo'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-fegc/images/sig-eng.png';
@@ -98,7 +101,7 @@ function wetkit_omega_preprocess_page(&$variables) {
     $theme_menu_prefix = 'gcwu-gcnb';
 
     // Default Logo logic.
-    if (theme_get_setting('default_logo') == 1) {
+    if ((theme_get_setting('default_logo', 'wetkit_omega') == 0) && (theme_get_setting('wetkit_theme_svg_default_logo', 'wetkit_omega') == 1)) {
       if ($language->language == 'en') {
         $variables['logo_svg'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-intranet/images/sig-blk-eng.svg';
         $variables['logo'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-intranet/images/sig-eng.png';
@@ -132,7 +135,7 @@ function wetkit_omega_preprocess_page(&$variables) {
     }
 
     // Default Logo logic.
-    if (theme_get_setting('default_logo') == 1) {
+    if ((theme_get_setting('default_logo', 'wetkit_omega') == 0) && (theme_get_setting('wetkit_theme_svg_default_logo', 'wetkit_omega') == 1)) {
       $variables['logo_svg'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-wet-boew/images/logo.svg';
       $variables['logo'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-wet-boew/images/logo.png';
     }
