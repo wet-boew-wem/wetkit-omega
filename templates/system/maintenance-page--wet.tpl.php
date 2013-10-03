@@ -58,7 +58,6 @@
                   <img src="/profiles/wetkit/libraries/wet-boew/dist/theme-wet-boew/images/logo.png" alt="" />
                 </object>
                 <span><?php print $site_name; ?></span>
-                <span lang="fr"><?php print $site_name; ?></span>
                 </p>
               </div>
             </div>
@@ -85,13 +84,13 @@
             <div class="span-4">
               <section>
                 <h2><?php print $help_title_text_en; ?></h2>
-                <p><?php $help_body_text_en; ?></p>
+                <p><?php print $help_body_text_en; ?></p>
               </section>
             </div>
             <div class="span-4" lang="fr">
               <section>
                 <h2><?php print $help_title_text_fr; ?></h2>
-                <p><?php $help_body_text_fr; ?></p>
+                <p><?php print $help_body_text_fr; ?></p>
               </section>
             </div>
             <div class="clear"></div>

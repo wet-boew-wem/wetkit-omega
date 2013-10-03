@@ -21,7 +21,7 @@
 <head>
   <meta charset="utf-8" />
   <title><?php print $head_title; ?></title>
-  <link rel="shortcut icon" href="/profiles/wetkit/libraries/wet-boew/dist/theme-wet-boew/images/favicon.ico" />
+  <link rel="shortcut icon" href="/profiles/wetkit/libraries/wet-boew/dist/theme-gcwu-fegc/images/favicon.ico" />
   <meta name="robots" content="noindex, nofollow, noarchive" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!--[if lte IE 8]>
@@ -29,15 +29,15 @@
   <script src="/profiles/wetkit/libraries/wet-boew/dist/js/polyfills/html5shiv-min.js"></script>
   <link rel="stylesheet" href="/profiles/wetkit/libraries/wet-boew/dist/grids/css/util-ie-min.css" />
   <link rel="stylesheet" href="/profiles/wetkit/libraries/wet-boew/dist/js/css/pe-ap-ie-min.css" />
-  <link rel="stylesheet" href="/profiles/wetkit/libraries/wet-boew/dist/theme-wet-boew/css/theme-serv-ie-min.css" />
-  <noscript><link rel="stylesheet" href="/profiles/wetkit/libraries/wet-boew/dist/theme-wet-boew/css/theme-ns-ie-min.css" /></noscript>
+  <link rel="stylesheet" href="/profiles/wetkit/libraries/wet-boew/dist/theme-gcwu-fegc/css/theme-serv-ie-min.css" />
+  <noscript><link rel="stylesheet" href="/profiles/wetkit/libraries/wet-boew/dist/theme-gcwu-fegc/css/theme-ns-ie-min.css" /></noscript>
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <script src="/profiles/wetkit/libraries/wet-boew/dist/js/jquery.min.js"></script>
   <link rel="stylesheet" href="/profiles/wetkit/libraries/wet-boew/dist/grids/css/util-min.css" />
   <link rel="stylesheet" href="/profiles/wetkit/libraries/wet-boew/dist/js/css/pe-ap-min.css" />
-  <link rel="stylesheet" href="/profiles/wetkit/libraries/wet-boew/dist/theme-wet-boew/css/theme-serv-min.css" />
-  <noscript><link rel="stylesheet" href="/profiles/wetkit/libraries/wet-boew/dist/theme-wet-boew/css/theme-ns-min.css" /></noscript>
+  <link rel="stylesheet" href="/profiles/wetkit/libraries/wet-boew/dist/theme-gcwu-fegc/css/theme-serv-min.css" />
+  <noscript><link rel="stylesheet" href="/profiles/wetkit/libraries/wet-boew/dist/theme-gcwu-fegc/css/theme-ns-min.css" /></noscript>
   <!--<![endif]-->
 </head>
 <body>
@@ -46,22 +46,25 @@
       <div id="wb-head-in">
         <header>
           <!-- HeaderStart -->
-          <div id="wet-fullhd">
-            <div id="wet-fullhd-in">
-            </div>
-          </div>
-          <div id="wet-bnr" role="banner">
-            <div id="wet-bnr-in">
-              <div id="wet-title">
-                <p id="wet-title-in">
-                <object data="/profiles/wetkit/libraries/wet-boew/dist/theme-wet-boew/images/logo.svg" role="img" tabindex="-1" type="image/svg+xml">
-                  <img src="/profiles/wetkit/libraries/wet-boew/dist/theme-wet-boew/images/logo.png" alt="" />
+          <div id="gcwu-title" class="span-8">
+            <div id="gcwu-sig" class="span-4 row-start">
+              <div id="gcwu-sig-in">
+                <object data="/profiles/wetkit/libraries/wet-boew/dist/theme-gcwu-fegc/images/sig-blk-en.svg" role="img" tabindex="-1" aria-label="Government of Canada / Gouvernement du Canada" type="image/svg+xml">
+                  <img src="/profiles/wetkit/libraries/wet-boew/dist/theme-gcwu-fegc/images/sig-eng-alt.png" class="image-actual" alt="Government of Canada / Gouvernement du Canada" />
                 </object>
-                <span><?php print $site_name; ?></span>
-                <span lang="fr"><?php print $site_name; ?></span>
-                </p>
               </div>
             </div>
+            <div id="gcwu-wmms" class="span-4 row-end">
+              <div id="gcwu-wmms-in">
+                <object data="/profiles/wetkit/libraries/wet-boew/dist/theme-gcwu-fegc/images/wmms-blk.svg" role="img" tabindex="-1" aria-label="Symbol of the Government of Canada / Symbole du gouvernement du Canada" type="image/svg+xml">
+                  <img src="/profiles/wetkit/libraries/wet-boew/dist/theme-gcwu-fegc/images/wmms-alt.png" class="image-actual" alt="Symbol of the Government of Canada / Symbole du gouvernement du Canada" />
+                </object>
+              </div>
+            </div>
+            <div class="clear"></div>
+            <div id="gcwu-title-left" class="span-4 row-start"><a href="home-accueil-en.html"><?php print $site_name; ?></a></div>
+            <div id="gcwu-title-right" class="span-4 row-end" lang="fr"><a href="home-accueil-fr.html"><?php print $site_name; ?></a></div>
+            <div class="clear"></div>
           </div>
           <!-- HeaderEnd -->
         </header>
@@ -85,31 +88,55 @@
             <div class="span-4">
               <section>
                 <h2><?php print $help_title_text_en; ?></h2>
-                <p><?php $help_body_text_en; ?></p>
+                <p><?php print $help_body_text_en; ?></p>
               </section>
             </div>
             <div class="span-4" lang="fr">
               <section>
                 <h2><?php print $help_title_text_fr; ?></h2>
-                <p><?php $help_body_text_fr; ?></p>
+                <p><?php print $help_body_text_fr; ?></p>
               </section>
             </div>
             <div class="clear"></div>
+            <div id="gcwu-bar" class="span-8"></div>
+            <div class="clear"></div>
             <!-- MainContentEnd -->
+            </div>
           </div>
         </div>
+      </div>
+      <div id="wb-foot">
+        <div id="wb-foot-in">
+          <footer>
+            <h2 id="wb-nav">Footer /
+              <span lang="fr">Pied de page</span>
+            </h2>
+            <!-- FooterStart -->
+            <div id="gcwu-tc" class="span-8">
+              <ul>
+                <li class="gcwu-tc-left">
+                  <div class="span-4 row-start"><a href="#" rel="license">Terms and conditions</a></div>
+                </li>
+                <li class="gcwu-tc-right" lang="fr">
+                  <div class="span-4 row-end"><a href="#" rel="license">Avis</a></div>
+                </li>
+              </ul>
+              <div class="clear"></div>
+            </div>
+            <!-- FooterEnd -->
+        </footer>
       </div>
     </div>
   </div>
   <!-- ScriptsStart -->
   <script src="/profiles/wetkit/libraries/wet-boew/dist/js/settings.js"></script>
   <!--[if lte IE 8]>
-  <script src="/profiles/wetkit/libraries/wet-boew/dist/theme-wet-boew/js/theme-ie-min.js"></script>
+  <script src="/profiles/wetkit/libraries/wet-boew/dist/theme-gcwu-fegc/js/theme-ie-min.js"></script>
   <script src="/profiles/wetkit/libraries/wet-boew/dist/js/pe-ap-ie-min.js"></script>
   <script src="/profiles/wetkit/libraries/wet-boew/dist/js/jquerymobile/jquery.mobile-ie.min.js"></script>
   <![endif]-->
   <!--[if gt IE 8]><!-->
-  <script src="/profiles/wetkit/libraries/wet-boew/dist/theme-wet-boew/js/theme-min.js"></script>
+  <script src="/profiles/wetkit/libraries/wet-boew/dist/theme-gcwu-fegc/js/theme-min.js"></script>
   <script src="/profiles/wetkit/libraries/wet-boew/dist/js/pe-ap-min.js"></script>
   <script src="/profiles/wetkit/libraries/wet-boew/dist/js/jquerymobile/jquery.mobile.min.js"></script>
   <!--<![endif]-->

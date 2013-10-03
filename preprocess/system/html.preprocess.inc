@@ -8,8 +8,13 @@
 /**
  * Implements hook_preprocess_html().
  */
-function wetkit_omega_preprocess_html(&$variables) {
+function wetkit_omega_preprocess_html(&$variables, $hook) {
   global $theme_key, $language;
+
+  // Return early, so the maintenance page does not call any of the code below.
+  if ($hook != 'html') {
+    return;
+  }
 
   // Modify html attributes.
   $variables['html_attributes_array']['lang'][] = $language->language;

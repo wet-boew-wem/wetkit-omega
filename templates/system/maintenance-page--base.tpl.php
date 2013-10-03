@@ -21,7 +21,7 @@
 <head>
   <meta charset="utf-8" />
   <title><?php print $head_title; ?></title>
-  <link rel="shortcut icon" href="/profiles/wetkit/libraries/wet-boew/dist/theme-wet-boew/images/favicon.ico" />
+  <link rel="shortcut icon" href="/profiles/wetkit/libraries/wet-boew/dist/theme-base/images/favicon.ico" />
   <meta name="robots" content="noindex, nofollow, noarchive" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!--[if lte IE 8]>
@@ -29,15 +29,15 @@
   <script src="/profiles/wetkit/libraries/wet-boew/dist/js/polyfills/html5shiv-min.js"></script>
   <link rel="stylesheet" href="/profiles/wetkit/libraries/wet-boew/dist/grids/css/util-ie-min.css" />
   <link rel="stylesheet" href="/profiles/wetkit/libraries/wet-boew/dist/js/css/pe-ap-ie-min.css" />
-  <link rel="stylesheet" href="/profiles/wetkit/libraries/wet-boew/dist/theme-wet-boew/css/theme-serv-ie-min.css" />
-  <noscript><link rel="stylesheet" href="/profiles/wetkit/libraries/wet-boew/dist/theme-wet-boew/css/theme-ns-ie-min.css" /></noscript>
+  <link rel="stylesheet" href="/profiles/wetkit/libraries/wet-boew/dist/theme-base/css/theme-serv-ie-min.css" />
+  <noscript><link rel="stylesheet" href="/profiles/wetkit/libraries/wet-boew/dist/theme-base/css/theme-ns-ie-min.css" /></noscript>
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <script src="/profiles/wetkit/libraries/wet-boew/dist/js/jquery.min.js"></script>
   <link rel="stylesheet" href="/profiles/wetkit/libraries/wet-boew/dist/grids/css/util-min.css" />
   <link rel="stylesheet" href="/profiles/wetkit/libraries/wet-boew/dist/js/css/pe-ap-min.css" />
-  <link rel="stylesheet" href="/profiles/wetkit/libraries/wet-boew/dist/theme-wet-boew/css/theme-serv-min.css" />
-  <noscript><link rel="stylesheet" href="/profiles/wetkit/libraries/wet-boew/dist/theme-wet-boew/css/theme-ns-min.css" /></noscript>
+  <link rel="stylesheet" href="/profiles/wetkit/libraries/wet-boew/dist/theme-base/css/theme-serv-min.css" />
+  <noscript><link rel="stylesheet" href="/profiles/wetkit/libraries/wet-boew/dist/theme-base/css/theme-ns-min.css" /></noscript>
   <!--<![endif]-->
 </head>
 <body>
@@ -46,19 +46,14 @@
       <div id="wb-head-in">
         <header>
           <!-- HeaderStart -->
-          <div id="wet-fullhd">
-            <div id="wet-fullhd-in">
-            </div>
+          <div id="base-fullhd">
+            <div id="base-fullhd-in"></div>
           </div>
-          <div id="wet-bnr" role="banner">
-            <div id="wet-bnr-in">
-              <div id="wet-title">
-                <p id="wet-title-in">
-                <object data="/profiles/wetkit/libraries/wet-boew/dist/theme-wet-boew/images/logo.svg" role="img" tabindex="-1" type="image/svg+xml">
-                  <img src="/profiles/wetkit/libraries/wet-boew/dist/theme-wet-boew/images/logo.png" alt="" />
-                </object>
-                <span><?php print $site_name; ?></span>
-                <span lang="fr"><?php print $site_name; ?></span>
+          <div id="base-bnr" role="banner">
+            <div id="base-bnr-in">
+              <div id="base-title">
+                <p id="base-title-in">
+                  <span><?php print $site_name; ?></span>
                 </p>
               </div>
             </div>
@@ -85,15 +80,16 @@
             <div class="span-4">
               <section>
                 <h2><?php print $help_title_text_en; ?></h2>
-                <p><?php $help_body_text_en; ?></p>
+                <p><?php print $help_body_text_en; ?></p>
               </section>
             </div>
             <div class="span-4" lang="fr">
               <section>
                 <h2><?php print $help_title_text_fr; ?></h2>
-                <p><?php $help_body_text_fr; ?></p>
+                <p><?php print $help_body_text_fr; ?></p>
               </section>
             </div>
+            <div class="clear"></div>
             <div class="clear"></div>
             <!-- MainContentEnd -->
           </div>
@@ -104,12 +100,12 @@
   <!-- ScriptsStart -->
   <script src="/profiles/wetkit/libraries/wet-boew/dist/js/settings.js"></script>
   <!--[if lte IE 8]>
-  <script src="/profiles/wetkit/libraries/wet-boew/dist/theme-wet-boew/js/theme-ie-min.js"></script>
+  <script src="/profiles/wetkit/libraries/wet-boew/dist/theme-base/js/theme-ie-min.js"></script>
   <script src="/profiles/wetkit/libraries/wet-boew/dist/js/pe-ap-ie-min.js"></script>
   <script src="/profiles/wetkit/libraries/wet-boew/dist/js/jquerymobile/jquery.mobile-ie.min.js"></script>
   <![endif]-->
   <!--[if gt IE 8]><!-->
-  <script src="/profiles/wetkit/libraries/wet-boew/dist/theme-wet-boew/js/theme-min.js"></script>
+  <script src="/profiles/wetkit/libraries/wet-boew/dist/theme-base/js/theme-min.js"></script>
   <script src="/profiles/wetkit/libraries/wet-boew/dist/js/pe-ap-min.js"></script>
   <script src="/profiles/wetkit/libraries/wet-boew/dist/js/jquerymobile/jquery.mobile.min.js"></script>
   <!--<![endif]-->

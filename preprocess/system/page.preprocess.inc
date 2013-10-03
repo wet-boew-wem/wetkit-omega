@@ -8,7 +8,7 @@
 /**
  * Implements hook_preprocess_page().
  */
-function wetkit_omega_preprocess_page(&$variables) {
+function wetkit_omega_preprocess_page(&$variables, $hook) {
 
   global $language;
 
