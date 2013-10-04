@@ -13,10 +13,10 @@
  * @see omega_preprocess_maintenance_page()
  */
 ?><!DOCTYPE html>
-<!--[if IE 7]><html lang="en" class="no-js ie7"><![endif]-->
-<!--[if IE 8]><html lang="en" class="no-js ie8"><![endif]-->
+<!--[if IE 7]><html lang="<?php print $language->language; ?>" class="no-js ie7"><![endif]-->
+<!--[if IE 8]><html lang="<?php print $language->language; ?>" class="no-js ie8"><![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="en" class="no-js">
+<html lang="<?php print $language->language; ?>" class="no-js">
 <!--<![endif]-->
 <head>
   <meta charset="utf-8" />
@@ -62,7 +62,7 @@
               </div>
             </div>
             <div class="clear"></div>
-            <div id="gcwu-title-left" class="span-4 row-start"><a href="home-accueil-en.html"><?php print $site_name; ?></a></div>
+            <div id="gcwu-title-left" class="span-4 row-start" lang="en"><a href="home-accueil-en.html"><?php print $site_name; ?></a></div>
             <div id="gcwu-title-right" class="span-4 row-end" lang="fr"><a href="home-accueil-fr.html"><?php print $site_name; ?></a></div>
             <div class="clear"></div>
           </div>
@@ -88,7 +88,7 @@
             <div class="clear"></div>
             <?php endif; ?>
             <?php if ($db_down): ?>
-            <div class="span-4">
+            <div class="span-4" lang="en">
               <section>
                 <h2><?php print $wxt_title_en; ?></h2>
                 <p><?php print $wxt_content_en; ?></p>
@@ -110,7 +110,7 @@
       <div id="wb-foot">
         <div id="wb-foot-in">
           <footer>
-            <h2 id="wb-nav">Footer /
+            <h2 id="wb-nav"><span lang="en">Footer</span> /
               <span lang="fr">Pied de page</span>
             </h2>
             <!-- FooterStart -->
