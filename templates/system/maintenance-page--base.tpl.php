@@ -13,10 +13,10 @@
  * @see omega_preprocess_maintenance_page()
  */
 ?><!DOCTYPE html>
-<!--[if IE 7]><html lang="en" class="no-js ie7"><![endif]-->
-<!--[if IE 8]><html lang="en" class="no-js ie8"><![endif]-->
+<!--[if IE 7]><html lang="<?php print $language->language; ?>" class="no-js ie7"><![endif]-->
+<!--[if IE 8]><html lang="<?php print $language->language; ?>" class="no-js ie8"><![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="en" class="no-js">
+<html lang="<?php print $language->language; ?>" class="no-js">
 <!--<![endif]-->
 <head>
   <meta charset="utf-8" />
@@ -80,7 +80,7 @@
             <div class="clear"></div>
             <?php endif; ?>
             <?php if ($db_down): ?>
-            <div class="span-4">
+            <div class="span-4" lang="en">
               <section>
                 <h2><?php print $wxt_title_en; ?></h2>
                 <p><?php print $wxt_content_en; ?></p>
