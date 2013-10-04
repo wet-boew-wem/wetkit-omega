@@ -61,6 +61,7 @@
         <div id="wb-main" role="main">
           <div id="wb-main-in">
             <!-- MainContentStart -->
+            <?php if (!$db_down): ?>
             <div class="span-8">
               <section>
                 <?php if ($title): ?>
@@ -71,19 +72,22 @@
               </section>
             </div>
             <div class="clear"></div>
+            <?php endif; ?>
+            <?php if ($db_down): ?>
             <div class="span-4">
               <section>
-                <h2><?php print $help_title_text_en; ?></h2>
-                <p><?php print $help_body_text_en; ?></p>
+                <h2><?php print $wxt_title_en; ?></h2>
+                <p><?php print $wxt_content_en; ?></p>
               </section>
             </div>
             <div class="span-4" lang="fr">
               <section>
-                <h2><?php print $help_title_text_fr; ?></h2>
-                <p><?php print $help_body_text_fr; ?></p>
+                <h2><?php print $wxt_title_fr; ?></h2>
+                <p><?php print $wxt_content_fr; ?></p>
               </section>
             </div>
             <div class="clear"></div>
+            <?php endif; ?>
             <!-- MainContentEnd -->
           </div>
         </div>

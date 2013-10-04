@@ -18,3 +18,27 @@ The [Omega 4.x documentation](https://drupal.org/node/1768686) is hosted on drup
 ## Sub Theming
 
 The easiest way to create a new WetKit Omega based sub-theme is by using [Drush](http://drupal.org/project/drush). Omega itself comes with a very easy-to-use Drush command for generating sub-themes through a command-line wizard. You can start the sub-theme creation wizard by invoking `drush omega-wizard` in the command-line and specifying you wish to create a subtheme of WetKit Omega.
+
+## Maintenance Mode Support (Settings.php)
+
+Variables for proper maintenance mode support
+
+$conf['install_profile'] = 'wetkit';
+$conf['maintenance_theme'] = 'wetkit_omega';
+
+Choose from one of the following
+
+$conf['maintenance_theme_suggestion'] = 'maintenance_page__base';
+$conf['maintenance_theme_suggestion'] = 'maintenance_page__internet';
+$conf['maintenance_theme_suggestion'] = 'maintenance_page__intranet';
+$conf['maintenance_theme_suggestion'] = 'maintenance_page__wet';
+
+Optional variables to override defaults
+
+$conf['head_title'] = '';
+$conf['site_name'] = '';
+$conf['title'] = '';
+$conf['wxt_title_en'] = '';
+$conf['wxt_content_en'] = '';
+$conf['wxt_title_fr'] = '';
+$conf['wxt_content_fr'] = '';
