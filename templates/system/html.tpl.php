@@ -50,7 +50,7 @@
   <?php print $styles; ?>
   <?php print $scripts; ?>
 </head>
-<body class="<?php print $classes; ?>"<?php print $attributes; ?>>
+<body class="<?php print $classes; ?>">
   <div id="<?php print $wetkit_col_array; ?>">
     <div id="wb-skip">
       <ul id="wb-tphp">
