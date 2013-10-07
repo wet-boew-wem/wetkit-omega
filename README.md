@@ -37,7 +37,6 @@ Optional variables to override defaults
 
 $conf['head_title'] = '';
 $conf['site_name'] = '';
-$conf['title'] = '';
 $conf['wxt_title_en'] = '';
 $conf['wxt_content_en'] = '';
 $conf['wxt_title_fr'] = '';

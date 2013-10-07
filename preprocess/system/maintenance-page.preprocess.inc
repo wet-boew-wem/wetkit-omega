@@ -29,7 +29,6 @@ function wetkit_omega_preprocess_maintenance_page(&$variables) {
     // Can override these values via $conf in settings.php
     $variables['head_title'] = isset($conf['head_title']) ? $conf['head_title'] : 'Site not available / Site non disponible';
     $variables['site_name'] = isset($conf['site_name']) ? $conf['site_name'] : 'Site not available / Site non disponible';
-    $variables['title'] = isset($conf['title']) ? $conf['title'] : 'Site not available / Site non disponible';
     $variables['wxt_title_en'] = isset($conf['wxt_title_en']) ? $conf['wxt_title_en'] : 'Site not available';
     $variables['wxt_content_en'] = isset($conf['wxt_content_en']) ? $conf['wxt_content_en'] : 'The site is currently not available due to technical problems.';
     $variables['wxt_title_fr'] = isset($conf['wxt_title_fr']) ? $conf['wxt_title_fr'] : 'Site non disponible';
