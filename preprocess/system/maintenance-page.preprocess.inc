@@ -15,7 +15,7 @@ function wetkit_omega_preprocess_maintenance_page(&$variables) {
   // Dead databases will show error messages so supplying this template will
   // allow themers to override the page and the content completely
   // also aware db_is_active is deprecated but still used in theme.inc for D7.
-  if (isset($variables['db_is_active']) && !$variables['db_is_active']) {
+  if (isset($variables['db_is_active']) && !$variables['db_is_active'] && MAINTENANCE_MODE != 'update') {
     $db_down = TRUE;
   }
 
