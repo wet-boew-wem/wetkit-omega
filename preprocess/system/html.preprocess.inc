@@ -39,15 +39,4 @@ function wetkit_omega_preprocess_html(&$variables, $hook) {
 
   // Remove Classes.
   $variables['classes_array'] = array_diff($variables['classes_array'], array('site-name-web-experience-toolkit'));
-
-  // Add Viewport for WET Mobile.
-  $element = array(
-    '#type' => 'html_tag',
-    '#tag' => 'meta',
-    '#attributes' => array(
-      'name' => 'viewport',
-      'content' => 'width=device-width, initial-scale=1',
-    ),
-  );
-  drupal_add_html_head($element, 'viewport');
 }

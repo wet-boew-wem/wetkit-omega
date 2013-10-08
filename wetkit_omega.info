@@ -61,6 +61,7 @@ settings[omega_cleartype] = 0
 settings[omega_handheld_friendly] = 0
 settings[omega_mobile_optimized] = 0
 settings[omega_viewport] = 1
+settings[omega_viewport_initial_scale] = 1.0
 settings[omega_viewport_user_scaleable] = 1
 settings[omega_chrome_edge] = 0
 settings[omega_internet_explorer_support] = 6
