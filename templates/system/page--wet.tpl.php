@@ -111,7 +111,7 @@
                           <img alt="<?php print t('WxT Logo'); ?>" src="<?php print $logo; ?>"  />
                         <?php endif; ?>
                         <?php if ($site_name): ?>
-                          <span><?php print $site_name; ?></span>
+                          <?php print $site_name; ?>
                         <?php endif; ?>
                       </a>
                     <?php endif; ?>

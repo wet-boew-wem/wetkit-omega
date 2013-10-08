@@ -127,17 +127,24 @@ function wetkit_omega_preprocess_page(&$variables, $hook) {
   else {
     $theme_prefix = 'wet';
     $theme_menu_prefix = 'wet-fullhd';
+    $is_logo_rendered = FALSE;
+
+    // Default Logo logic.
+    if ((theme_get_setting('default_logo', 'wetkit_omega') == 0) && (theme_get_setting('wetkit_theme_svg_default_logo', 'wetkit_omega') == 1)) {
+      $is_logo_rendered = TRUE;
+      $variables['logo_svg'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-wet-boew/images/logo.svg';
+      $variables['logo'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-wet-boew/images/logo.png';
+    }
 
     // Site Name logic.
     if (!empty($variables['site_name'])) {
       $variables['site_frontpage'] = '/' . variable_get('site_frontpage', 'node');
-      $variables['site_name'] = $variables['site_name_title'];
-    }
-
-    // Default Logo logic.
-    if ((theme_get_setting('default_logo', 'wetkit_omega') == 0) && (theme_get_setting('wetkit_theme_svg_default_logo', 'wetkit_omega') == 1)) {
-      $variables['logo_svg'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-wet-boew/images/logo.svg';
-      $variables['logo'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-wet-boew/images/logo.png';
+      if (!$is_logo_rendered) {
+        $variables['site_name'] = '<span class="no-logo">' . $variables['site_name_title'] . '</span>';
+      }
+      else {
+       $variables['site_name'] = '<span>' . $variables['site_name_title'] . '</span>';
+      }
     }
   }
 
