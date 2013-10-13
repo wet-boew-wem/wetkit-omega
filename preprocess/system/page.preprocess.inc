@@ -27,7 +27,7 @@ function wetkit_omega_preprocess_page(&$variables, $hook) {
   // Site name.
   if (!empty($variables['site_name'])) {
     $variables['site_name_title'] = variable_get('site_name', 'Drupal');
-    $variables['site_name'] = l($variables['site_name_title'], '<front>', array('attributes' => array('title' => t('Home page'))));
+    $variables['site_name'] = l($variables['site_name_title'], variable_get('site_frontpage', 'node'), array('attributes' => array('title' => t('Home page'))));
     $variables['site_name_unlinked'] = $variables['site_name_title'];
   }
 
@@ -216,6 +216,7 @@ function wetkit_omega_preprocess_page(&$variables, $hook) {
     $variables['custom_search']['#suffix'] = '</div>';
     $variables['custom_search']['actions']['submit']['#id'] = $theme_prefix . '-srch-submit';
     $variables['custom_search']['actions']['submit']['#attributes']['data-icon'] = 'search';
+    $variables['custom_search']['actions']['submit']['#attributes']['value'] = t('Search');
     $variables['search_box'] = render($variables['custom_search']);
     $variables['search_box'] = str_replace('type="text"', 'type="search"', $variables['search_box']);
   }

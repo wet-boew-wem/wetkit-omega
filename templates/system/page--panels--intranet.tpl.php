@@ -100,11 +100,9 @@
               <div id="gcwu-gcnb-fip">
                 <div id="gcwu-sig">
                   <div id="gcwu-sig-in">
-                    <div id="gcwu-sig-<?php print $language_suffix; ?>" title="<?php print t('Government of Canada'); ?>">
-                      <object data="<?php print $logo_svg; ?>" role="img" tabindex="-1" aria-label="<?php print t('Government of Canada'); ?>" type="image/svg+xml">
-                        <img src="<?php print $logo; ?>" alt="<?php print t('Government of Canada'); ?>" />
-                      </object>
-                    </div>
+                    <object data="<?php print $logo_svg; ?>" role="img" tabindex="-1" aria-label="<?php print t('Government of Canada'); ?>" type="image/svg+xml">
+                      <img src="<?php print $logo; ?>" alt="<?php print t('Government of Canada'); ?>" />
+                    </object>
                   </div>
                 </div>
                 <div id="gcwu-wmms">
