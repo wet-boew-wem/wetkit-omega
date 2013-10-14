@@ -180,6 +180,16 @@ div.ctools-dropbutton .ctools-link a {
 }
 
 /* =============================================================================
+   Metatag
+   ========================================================================== */
+.vertical-tabs .vertical-tabs-panes .metatags-form {
+  margin-top: 1em !important;
+}
+.vertical-tabs .vertical-tabs-panes .metatags-form .fieldset-wrapper {
+  margin-left: 10px;
+}
+
+/* =============================================================================
    Navbar
    ========================================================================== */
 .navbar-horizontal .tab a .ui-link:visited,
