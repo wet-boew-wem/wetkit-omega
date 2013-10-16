@@ -48,8 +48,8 @@
               </div>
             </div>
             <div class="clear"></div>
-            <div id="gcwu-title-left" class="span-4 row-start" lang="en"><a href="cont-en.html"><?php print $site_name; ?></a></div>
-            <div id="gcwu-title-right" class="span-4 row-end" lang="fr"><a href="cont-fr.html"><?php print $site_name; ?></a></div>
+            <div id="gcwu-title-left" class="span-4 row-start" lang="en"><a href="/en"><?php print $site_name; ?></a></div>
+            <div id="gcwu-title-right" class="span-4 row-end" lang="fr"><a href="/fr"><?php print i18n_variable_get('site_name', 'fr', $site_name); ?></a></div>
             <div class="clear"></div>
           </div>
           <!-- HeaderEnd -->
