@@ -180,6 +180,45 @@ div.ctools-dropbutton .ctools-link a {
 }
 
 /* =============================================================================
+   jQuery Update
+   ========================================================================== */
+.ui-widget-overlay {
+  background: none;
+  opacity: 0 !important;
+}
+
+/* =============================================================================
+   Linkit
+   ========================================================================== */
+.linkit-wrapper {
+  z-index: 501;
+  background-color: white !important;
+}
+.linkit-wrapper .ui-dialog-titlebar-close {
+  display: none;
+}
+.linkit-wrapper #edit-linkit-insert {
+  display: inline;
+  margin-right: 10px;
+}
+.linkit-wrapper .better-autocomplete > .result.highlight {
+  background-color: #ffffce;
+}
+
+#linkit-modal fieldset.form-wrapper {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.linkit-attributes legend:after {
+  border: none;
+}
+.linkit-attributes .fieldset-wrapper {
+  margin-left: 20px;
+}
+
+/* =============================================================================
    Metatag
    ========================================================================== */
 .vertical-tabs .vertical-tabs-panes .metatags-form {
