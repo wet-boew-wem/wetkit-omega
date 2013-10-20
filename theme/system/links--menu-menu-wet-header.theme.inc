@@ -28,6 +28,9 @@ function wetkit_omega_links__menu_menu_wet_header($variables) {
   elseif (variable_get('wetkit_wetboew_theme', 0) == 3) {
     $theme_prefix = 'base-gcnb';
   }
+  elseif (variable_get('wetkit_wetboew_theme', 0) == 4) {
+    $theme_prefix = 'ogpl-fullhd-lang-';
+  }
   else {
     $theme_prefix = 'wet-fullhd-lang-';
   }

@@ -51,6 +51,9 @@ function wetkit_omega_preprocess_maintenance_page(&$variables) {
     elseif (variable_get('wetkit_wetboew_theme', 0) == 3) {
      	$variables['theme_hook_suggestion'] = 'maintenance_page__base';
     }
+    elseif (variable_get('wetkit_wetboew_theme', 0) == 4) {
+      $variables['theme_hook_suggestion'] = 'maintenance_page__ogpl';
+    }
     else {
       $variables['theme_hook_suggestion'] = 'maintenance_page__wet';
     }

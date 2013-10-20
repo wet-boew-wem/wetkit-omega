@@ -20,6 +20,9 @@ function wetkit_omega_preprocess_panels_pane(&$variables) {
     elseif (variable_get('wetkit_wetboew_theme', 0) == 3) {
       $variables['date_mod'] = 'base-date-mod';
     }
+    elseif (variable_get('wetkit_wetboew_theme', 0) == 4) {
+      $variables['date_mod'] = 'ogpl-date-mod';
+    }
     else {
       $variables['date_mod'] = 'wet-date-mod';
     }
