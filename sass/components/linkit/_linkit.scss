@@ -2,9 +2,12 @@
    Linkit
    ========================================================================== */
 
-.linkit-wrapper {
+.ui-dialog.linkit-wrapper {
   z-index: 501;
   background-color: white !important;
+  .ui-dialog-titlebar {
+    border: none;
+  }
   .ui-dialog-titlebar-close {
     display: none;
   }

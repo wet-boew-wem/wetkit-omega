@@ -190,18 +190,21 @@ div.ctools-dropbutton .ctools-link a {
 /* =============================================================================
    Linkit
    ========================================================================== */
-.linkit-wrapper {
+.ui-dialog.linkit-wrapper {
   z-index: 501;
   background-color: white !important;
 }
-.linkit-wrapper .ui-dialog-titlebar-close {
+.ui-dialog.linkit-wrapper .ui-dialog-titlebar {
+  border: none;
+}
+.ui-dialog.linkit-wrapper .ui-dialog-titlebar-close {
   display: none;
 }
-.linkit-wrapper #edit-linkit-insert {
+.ui-dialog.linkit-wrapper #edit-linkit-insert {
   display: inline;
   margin-right: 10px;
 }
-.linkit-wrapper .better-autocomplete > .result.highlight {
+.ui-dialog.linkit-wrapper .better-autocomplete > .result.highlight {
   background-color: #ffffce;
 }
 
