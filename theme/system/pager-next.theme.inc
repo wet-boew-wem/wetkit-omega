@@ -24,11 +24,9 @@ function wetkit_omega_pager_next($variables) {
   $element = $variables['element'];
   $interval = $variables['interval'];
   $parameters = $variables['parameters'];
-
   if (!isset($variables['attributes'])) {
     $variables['attributes'] = array();
   }
-
   $attributes = $variables['attributes'];
   global $pager_page_array, $pager_total;
   $output = '';
@@ -38,26 +36,11 @@ function wetkit_omega_pager_next($variables) {
     $page_new = pager_load_array($pager_page_array[$element] + $interval, $element, $pager_page_array);
     // If the next page is the last page, mark the link as such.
     if ($page_new[$element] == ($pager_total[$element] - 1)) {
-      $output = theme('pager_last',
-        array(
-          'text' => $text,
-          'element' => $element,
-          'parameters' => $parameters,
-          'attributes' => $attributes,
-        )
-      );
+      $output = theme('pager_last', array('text' => $text, 'element' => $element, 'parameters' => $parameters, 'attributes' => $attributes));
     }
     // The next page is not the last page.
     else {
-      $output = theme('pager_link',
-        array(
-          'text' => $text,
-          'page_new' => $page_new,
-          'element' => $element,
-          'parameters' => $parameters,
-          'attributes' => $attributes,
-        )
-      );
+      $output = theme('pager_link', array('text' => $text, 'page_new' => $page_new, 'element' => $element, 'parameters' => $parameters, 'attributes' => $attributes));
     }
   }
 

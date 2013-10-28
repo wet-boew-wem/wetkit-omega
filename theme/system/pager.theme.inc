@@ -7,7 +7,6 @@
 
 /**
  * Returns HTML for the  pager.
- *
  * @param array $variables
  *   An associative array containing:
  *   - text: The name (or image) of the link.
@@ -36,6 +35,7 @@ function wetkit_omega_pager($variables) {
   $pager_last = $pager_current + $quantity - $pager_middle;
   // Max is the maximum page number.
   $pager_max = $pager_total[$element];
+  // End of marker calculations.
 
   // Prepare for generation loop.
   $i = $pager_first;
@@ -58,43 +58,10 @@ function wetkit_omega_pager($variables) {
     'normal' => array('class' => 'button button-small ui-link'),
   );
 
-  $li_first = theme('pager_first',
-    array(
-      'text' => (isset($tags[0]) ? $tags[0] : t('« first')),
-      'element' => $element,
-      'parameters' => $parameters,
-      'attributes' => $attributes['first'],
-    )
-  );
-
-  $li_previous = theme('pager_previous',
-    array(
-      'text' => (isset($tags[1]) ? $tags[1] : t('‹ previous')),
-      'element' => $element,
-      'interval' => 1,
-      'parameters' => $parameters,
-      'attributes' => $attributes['previous'],
-    )
-  );
-
-  $li_next = theme('pager_next',
-    array(
-      'text' => (isset($tags[3]) ? $tags[3] : t('next ›')),
-      'element' => $element,
-      'interval' => 1,
-      'parameters' => $parameters,
-      'attributes' => $attributes['next'],
-    )
-  );
-
-  $li_last = theme('pager_last',
-    array(
-      'text' => (isset($tags[4]) ? $tags[4] : t('last »')),
-      'element' => $element,
-      'parameters' => $parameters,
-      'attributes' => $attributes['last'],
-    )
-  );
+  $li_first = theme('pager_first', array('text' => (isset($tags[0]) ? $tags[0] : t('« first')), 'element' => $element, 'parameters' => $parameters, 'attributes' => $attributes['first']));
+  $li_previous = theme('pager_previous', array('text' => (isset($tags[1]) ? $tags[1] : t('‹ previous')), 'element' => $element, 'interval' => 1, 'parameters' => $parameters, 'attributes' => $attributes['previous']));
+  $li_next = theme('pager_next', array('text' => (isset($tags[3]) ? $tags[3] : t('next ›')), 'element' => $element, 'interval' => 1, 'parameters' => $parameters, 'attributes' => $attributes['next']));
+  $li_last = theme('pager_last', array('text' => (isset($tags[4]) ? $tags[4] : t('last »')), 'element' => $element, 'parameters' => $parameters, 'attributes' => $attributes['last']));
 
   if ($pager_total[$element] > 1) {
     if ($li_first) {
@@ -123,15 +90,7 @@ function wetkit_omega_pager($variables) {
         if ($i < $pager_current) {
           $items[] = array(
             'class' => array('pager-item'),
-            'data' => theme('pager_previous',
-              array(
-                'text' => $i,
-                'element' => $element,
-                'interval' => ($pager_current - $i),
-                'parameters' => $parameters,
-                'attributes' => $attributes['normal'],
-              ),
-            )
+            'data' => theme('pager_previous', array('text' => $i, 'element' => $element, 'interval' => ($pager_current - $i), 'parameters' => $parameters, 'attributes' => $attributes['normal'])),
           );
         }
         if ($i == $pager_current) {
@@ -143,15 +102,7 @@ function wetkit_omega_pager($variables) {
         if ($i > $pager_current) {
           $items[] = array(
             'class' => array('pager-item'),
-            'data' => theme('pager_next',
-              array(
-                'text' => $i,
-                'element' => $element,
-                'interval' => ($i - $pager_current),
-                'parameters' => $parameters,
-                'attributes' => $attributes['normal'],
-              ),
-            )
+            'data' => theme('pager_next', array('text' => $i, 'element' => $element, 'interval' => ($i - $pager_current), 'parameters' => $parameters, 'attributes' => $attributes['normal'])),
           );
         }
       }

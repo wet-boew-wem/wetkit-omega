@@ -12,6 +12,7 @@
  *   The array used to modify the panels ipe placeholder pane.
  */
 function wetkit_omega_panels_ipe_placeholder_pane($variables) {
+  $region_id = $variables['region_id'];
   $region_title = $variables['region_title'];
 
   $output = '<div class="panels-ipe-placeholder-content">';

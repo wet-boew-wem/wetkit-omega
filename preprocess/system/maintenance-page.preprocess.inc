@@ -42,14 +42,14 @@ function wetkit_omega_preprocess_maintenance_page(&$variables) {
   // Maintenance Page logic for when the site is in maintenance mode.
   // but database is not down.
   if (!$db_down) {
-    if (variable_get('wetkit_wetboew_theme', 0) == 1) {
-      $variables['theme_hook_suggestion'] = 'maintenance_page__internet';
+  	if (variable_get('wetkit_wetboew_theme', 0) == 1) {
+    	$variables['theme_hook_suggestion'] = 'maintenance_page__internet';
     }
     elseif (variable_get('wetkit_wetboew_theme', 0) == 2) {
-      $variables['theme_hook_suggestion'] = 'maintenance_page__intranet';
+    	$variables['theme_hook_suggestion'] = 'maintenance_page__intranet';
     }
     elseif (variable_get('wetkit_wetboew_theme', 0) == 3) {
-      $variables['theme_hook_suggestion'] = 'maintenance_page__base';
+     	$variables['theme_hook_suggestion'] = 'maintenance_page__base';
     }
     elseif (variable_get('wetkit_wetboew_theme', 0) == 4) {
       $variables['theme_hook_suggestion'] = 'maintenance_page__ogpl';

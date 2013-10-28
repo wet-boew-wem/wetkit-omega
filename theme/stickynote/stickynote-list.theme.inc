@@ -13,7 +13,6 @@
  */
 function wetkit_omega_stickynote_list($variables) {
   $output = '';
-
   // In this case, $result is a list of nodes returned from a database query.
   $list = array();
   $list['type'] = 'ol';
@@ -29,6 +28,7 @@ function wetkit_omega_stickynote_list($variables) {
         $item .= $note['data']['edit']['data'];
       }
       if ($variables['can_delete']) {
+        $token = drupal_get_token($key);
         $item .= $note['data']['delete']['data'];
       }
       $item .= '</span>';
