@@ -138,7 +138,7 @@
           </div>
         </div>
         <div id="gcwu-subsite" class="gcwu-subsite-1">
-          <p><?php print l(t($wetkit_sub_site), '<front>'); ?></p>
+          <p><?php print l($wetkit_sub_site, '<front>'); ?></p>
         </div>
         <nav role="navigation">
           <div id="gcwu-psnb">

@@ -1,4 +1,18 @@
-<!DOCTYPE html>
+<?php
+/**
+ * @file
+ * Omega implementation to display a single Drupal page while offline.
+ *
+ * Not all variables are mirrored from html.tpl.php and page.tpl.php, only those
+ * required to deliver valid html page with branding and site offline messages.
+ * $polyfills is included to support HTML5 in IE8 and below.
+ *
+ * @see template_preprocess()
+ * @see template_preprocess_maintenance_page()
+ * @see omega_preprocess()
+ * @see omega_preprocess_maintenance_page()
+ */
+?><!DOCTYPE html>
 <!--[if IE 7]><html lang="<?php print $language->language; ?>" class="no-js ie7"><![endif]-->
 <!--[if IE 8]><html lang="<?php print $language->language; ?>" class="no-js ie8"><![endif]-->
 <!--[if gt IE 8]><!-->

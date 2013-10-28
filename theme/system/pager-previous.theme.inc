@@ -24,9 +24,11 @@ function wetkit_omega_pager_previous($variables) {
   $element = $variables['element'];
   $interval = $variables['interval'];
   $parameters = $variables['parameters'];
-    if (!isset($variables['attributes'])) {
+
+  if (!isset($variables['attributes'])) {
     $variables['attributes'] = array();
   }
+
   $attributes = $variables['attributes'];
   global $pager_page_array;
   $output = '';
@@ -37,11 +39,26 @@ function wetkit_omega_pager_previous($variables) {
 
     // If the previous page is the first page, mark the link as such.
     if ($page_new[$element] == 0) {
-      $output = theme('pager_first', array('text' => $text, 'element' => $element, 'parameters' => $parameters, 'attributes' => $attributes));
+      $output = theme('pager_first',
+        array(
+          'text' => $text,
+          'element' => $element,
+          'parameters' => $parameters,
+          'attributes' => $attributes,
+        ),
+      );
     }
     // The previous page is not the first page.
     else {
-      $output = theme('pager_link', array('text' => $text, 'page_new' => $page_new, 'element' => $element, 'parameters' => $parameters, 'attributes' => $attributes));
+      $output = theme('pager_link',
+        array(
+          'text' => $text,
+          'page_new' => $page_new,
+          'element' => $element,
+          'parameters' => $parameters,
+          'attributes' => $attributes,
+        ),
+      );
     }
   }
 

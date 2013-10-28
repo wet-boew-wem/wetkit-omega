@@ -9,7 +9,10 @@
  * Theme the 'current search' active link for search blocks.
  *
  * @param array $variables
+ *   String for the current search active link.
+ *
  * @return string
+ *   The rendered string.
  */
 function wetkit_omega_current_search_link_active($variables) {
   // Builds accessible markup.

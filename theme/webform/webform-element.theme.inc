@@ -34,7 +34,12 @@ function wetkit_omega_webform_element($variables) {
     $type = 'display';
   }
   else {
-    $type = (isset($element['#type']) && !in_array($element['#type'], array('markup', 'textfield', 'webform_email', 'webform_number'))) ? $element['#type'] : $element['#webform_component']['type'];
+    $type = (isset($element['#type']) && !in_array($element['#type'], array(
+      'markup',
+      'textfield',
+      'webform_email',
+      'webform_number',
+    ))) ? $element['#type'] : $element['#webform_component']['type'];
   }
 
   // Convert the parents array into a string, excluding the "submitted" wrapper.

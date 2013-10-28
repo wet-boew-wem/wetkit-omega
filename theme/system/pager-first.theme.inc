@@ -31,7 +31,15 @@ function wetkit_omega_pager_first($variables) {
 
   // If we are anywhere but the first page.
   if ($pager_page_array[$element] > 0) {
-    $output = theme('pager_link', array('text' => $text, 'page_new' => pager_load_array(0, $element, $pager_page_array), 'element' => $element, 'parameters' => $parameters, 'attributes' => $attributes));
+    $output = theme('pager_link',
+      array(
+        'text' => $text,
+        'page_new' => pager_load_array(0, $element, $pager_page_array),
+        'element' => $element,
+        'parameters' => $parameters,
+        'attributes' => $attributes,
+      ),
+    );
   }
 
   return $output;

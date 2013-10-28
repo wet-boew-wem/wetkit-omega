@@ -9,7 +9,10 @@
  * Theme the 'current search text' for search blocks.
  *
  * @param array $variables
+ *   String for the current search text.
+ *
  * @return string
+ *   The rendered string.
  */
 function wetkit_omega_current_search_text(array $variables) {
   // Initializes output, sanitizes text if necessary.

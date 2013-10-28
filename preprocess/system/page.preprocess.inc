@@ -148,7 +148,7 @@ function wetkit_omega_preprocess_page(&$variables, $hook) {
         $variables['site_name'] = '<span class="no-logo">' . $variables['site_name_title'] . '</span>';
       }
       else {
-       $variables['site_name'] = '<span>' . $variables['site_name_title'] . '</span>';
+        $variables['site_name'] = '<span>' . $variables['site_name_title'] . '</span>';
       }
     }
     // TODO: Logic for images for Base Theme.
@@ -173,7 +173,7 @@ function wetkit_omega_preprocess_page(&$variables, $hook) {
         $variables['site_name'] = '<span class="no-logo">' . $variables['site_name_title'] . '</span>';
       }
       else {
-       $variables['site_name'] = '<span>' . $variables['site_name_title'] . '</span>';
+        $variables['site_name'] = '<span>' . $variables['site_name_title'] . '</span>';
       }
     }
   }
