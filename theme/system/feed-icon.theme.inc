@@ -22,7 +22,7 @@ function wetkit_omega_feed_icon($variables) {
       'width' => 16,
       'height' => 16,
       'alt' => $text,
-    ),
+    )
   );
   if ($image) {
     return l($image, $variables['url'],
@@ -32,7 +32,7 @@ function wetkit_omega_feed_icon($variables) {
           'class' => array('feed-icon'),
           'title' => $text,
         ),
-      ),
+      )
     );
   }
 }
