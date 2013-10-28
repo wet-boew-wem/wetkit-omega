@@ -64,7 +64,7 @@ function wetkit_omega_pager($variables) {
       'element' => $element,
       'parameters' => $parameters,
       'attributes' => $attributes['first'],
-    ),
+    )
   );
 
   $li_previous = theme('pager_previous',
@@ -74,7 +74,7 @@ function wetkit_omega_pager($variables) {
       'interval' => 1,
       'parameters' => $parameters,
       'attributes' => $attributes['previous'],
-    ),
+    )
   );
 
   $li_next = theme('pager_next',
@@ -84,7 +84,7 @@ function wetkit_omega_pager($variables) {
       'interval' => 1,
       'parameters' => $parameters,
       'attributes' => $attributes['next'],
-    ),
+    )
   );
 
   $li_last = theme('pager_last',
@@ -93,7 +93,7 @@ function wetkit_omega_pager($variables) {
       'element' => $element,
       'parameters' => $parameters,
       'attributes' => $attributes['last'],
-    ),
+    )
   );
 
   if ($pager_total[$element] > 1) {
@@ -131,7 +131,7 @@ function wetkit_omega_pager($variables) {
                 'parameters' => $parameters,
                 'attributes' => $attributes['normal'],
               ),
-            ),
+            )
           );
         }
         if ($i == $pager_current) {
@@ -151,7 +151,7 @@ function wetkit_omega_pager($variables) {
                 'parameters' => $parameters,
                 'attributes' => $attributes['normal'],
               ),
-            ),
+            )
           );
         }
       }

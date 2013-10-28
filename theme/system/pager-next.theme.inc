@@ -44,7 +44,7 @@ function wetkit_omega_pager_next($variables) {
           'element' => $element,
           'parameters' => $parameters,
           'attributes' => $attributes,
-        ),
+        )
       );
     }
     // The next page is not the last page.
@@ -56,7 +56,7 @@ function wetkit_omega_pager_next($variables) {
           'element' => $element,
           'parameters' => $parameters,
           'attributes' => $attributes,
-        ),
+        )
       );
     }
   }

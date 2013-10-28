@@ -35,7 +35,7 @@ function wetkit_omega_views_mini_pager($variables) {
         'attributes' => array(
           'class' => 'button button-accent ui-link',
         ),
-      ),
+      )
     );
     if (empty($li_previous)) {
       $li_previous = '&lt;&lt;';
@@ -54,7 +54,7 @@ function wetkit_omega_views_mini_pager($variables) {
         'attributes' => array(
           'class' => 'button button-accent ui-link',
         ),
-      ),
+      )
     );
 
     if (empty($li_next)) {
@@ -86,7 +86,7 @@ function wetkit_omega_views_mini_pager($variables) {
         'attributes' => array(
           'class' => array('pager'),
         ),
-      ),
+      )
     );
   }
 }

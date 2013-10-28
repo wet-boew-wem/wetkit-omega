@@ -45,7 +45,7 @@ function wetkit_omega_pager_previous($variables) {
           'element' => $element,
           'parameters' => $parameters,
           'attributes' => $attributes,
-        ),
+        )
       );
     }
     // The previous page is not the first page.
@@ -57,7 +57,7 @@ function wetkit_omega_pager_previous($variables) {
           'element' => $element,
           'parameters' => $parameters,
           'attributes' => $attributes,
-        ),
+        )
       );
     }
   }

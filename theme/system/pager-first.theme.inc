@@ -38,7 +38,7 @@ function wetkit_omega_pager_first($variables) {
         'element' => $element,
         'parameters' => $parameters,
         'attributes' => $attributes,
-      ),
+      )
     );
   }
 

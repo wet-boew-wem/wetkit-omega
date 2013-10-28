@@ -41,7 +41,7 @@ function wetkit_omega_pager_last($variables) {
         'element' => $element,
         'parameters' => $parameters,
         'attributes' => $attributes,
-      ),
+      )
     );
   }
   return $output;
