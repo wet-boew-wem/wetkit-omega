@@ -5,3 +5,7 @@
 .contextual-links-wrapper {
   z-index: 10;
 }
+
+.contextual-links-region-active {
+  z-index: 100 !important;
+}
