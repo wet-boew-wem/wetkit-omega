@@ -1,3 +1,13 @@
+<?php
+/**
+ * @file
+ * Layout extension template
+ *
+ * Variables available:
+ * - $title: The title of the content
+ * - $content: The actual content
+ */
+?>
 <div class="l-page">
   <header class="l-header" role="banner">
     <div class="l-branding">

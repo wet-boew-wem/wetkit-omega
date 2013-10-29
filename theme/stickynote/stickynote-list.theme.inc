@@ -28,7 +28,6 @@ function wetkit_omega_stickynote_list($variables) {
         $item .= $note['data']['edit']['data'];
       }
       if ($variables['can_delete']) {
-        $token = drupal_get_token($key);
         $item .= $note['data']['delete']['data'];
       }
       $item .= '</span>';

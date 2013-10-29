@@ -13,6 +13,8 @@
  */
 function wetkit_omega_stickynote_confirm($variables) {
   $stickynote = $variables['stickynote'];
+  $output = '';
+
   $token = drupal_get_token($stickynote->snid);
   $output .= '<span id="confirm-delete-' . $stickynote->snid . '" style="text-align: left;">';
   $output .= 'Are you sure?&nbsp;';
