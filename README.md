@@ -23,6 +23,16 @@ Sub Theming
 
 The easiest way to create a new [WxT Omega][wxt_omega] based sub-theme is by using [Drush][drush]. [Omega][omega] itself comes with a very easy-to-use Drush command for generating sub-themes through a command-line wizard. You can start the sub-theme creation wizard by invoking `drush omega-wizard` in the command-line and specifying you wish to create a subtheme of [WxT Omega][wxt_omega].
 
+It is worth noting that the Drush subtheme provided by Omega Wizard won't add your custom regions. Simply add the following custom region to your new subtheme's info file
+
+```sh
+regions[content_aside]  = Aside
+regions[leaderboard]    = Leaderboard
+regions[mega_menu]      = Mega Menu
+regions[page_bottom]    = Page bottom
+regions[page_top]       = Page top
+```
+
 Maintenance Mode Support (Settings.php)
 ---------------------------------------
 
