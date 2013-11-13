@@ -80,6 +80,8 @@ function wetkit_omega_preprocess_page(&$variables, $hook) {
   }
 
   // Custom Logic Based on Theme Selection
+  $is_logo_rendered = FALSE;
+
   // Internet Theme.
   if (variable_get('wetkit_wetboew_theme', 0) == 1) {
     $theme_prefix = 'gcwu';
@@ -126,56 +128,33 @@ function wetkit_omega_preprocess_page(&$variables, $hook) {
   elseif (variable_get('wetkit_wetboew_theme', 0) == 3) {
     $theme_prefix = 'base';
     $theme_menu_prefix = 'base-gcnb';
-
-    // TODO: Logic for images for Base Theme.
   }
   // OGPL Theme.
   elseif (variable_get('wetkit_wetboew_theme', 0) == 4) {
     $theme_prefix = 'ogpl';
     $theme_menu_prefix = 'ogpl-fullhd';
-    $is_logo_rendered = FALSE;
 
     // Default Logo logic.
     if ((theme_get_setting('default_logo', 'wetkit_omega') == 0)) {
-      $is_logo_rendered = TRUE;
       $variables['logo'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-ogpl/images/theme103_logo.png';
     }
-
-    // Site Name logic.
-    if (!empty($variables['site_name'])) {
-      $variables['site_frontpage'] = '/' . variable_get('site_frontpage', 'node');
-      if (!$is_logo_rendered) {
-        $variables['site_name'] = '<span class="no-logo">' . $variables['site_name_title'] . '</span>';
-      }
-      else {
-        $variables['site_name'] = '<span>' . $variables['site_name_title'] . '</span>';
-      }
-    }
-    // TODO: Logic for images for Base Theme.
   }
   // WET Theme.
   else {
     $theme_prefix = 'wet';
     $theme_menu_prefix = 'wet-fullhd';
-    $is_logo_rendered = FALSE;
 
     // Default Logo logic.
     if ((theme_get_setting('default_logo', 'wetkit_omega') == 0) && (theme_get_setting('wetkit_theme_svg_default_logo', 'wetkit_omega') == 1)) {
-      $is_logo_rendered = TRUE;
       $variables['logo_svg'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-wet-boew/images/logo.svg';
       $variables['logo'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-wet-boew/images/logo.png';
     }
+  }
 
-    // Site Name logic.
-    if (!empty($variables['site_name'])) {
-      $variables['site_frontpage'] = '/' . variable_get('site_frontpage', 'node');
-      if (!$is_logo_rendered) {
-        $variables['site_name'] = '<span class="no-logo">' . $variables['site_name_title'] . '</span>';
-      }
-      else {
-        $variables['site_name'] = '<span>' . $variables['site_name_title'] . '</span>';
-      }
-    }
+  // Site Name logic.
+  if (!empty($variables['site_name'])) {
+    $variables['site_frontpage'] = '/' . variable_get('site_frontpage', 'node');
+    $variables['site_name'] = trim($variables['site_name_title']);
   }
 
   // Internationalization Settings.

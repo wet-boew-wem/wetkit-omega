@@ -110,15 +110,17 @@
                         <?php elseif ($logo): ?>
                           <img alt="<?php print t('WxT Logo'); ?>" src="<?php print $logo; ?>"  />
                         <?php endif; ?>
-                        <?php if ($site_name): ?>
-                          <?php print $site_name; ?>
-                        <?php endif; ?>
+                        <span>
+                          <?php if ($site_name): ?>
+                            <?php print $site_name; ?>
+                          <?php endif; ?>
+                          <?php if ($site_slogan): ?>
+                            <small><?php print $site_slogan; ?></small>
+                          <?php endif; ?>
+                        </span>
                       </a>
                     <?php endif; ?>
                   </p>
-                <?php if ($site_slogan): ?>
-                  <h2 class="site-slogan"><?php print $site_slogan; ?></h2>
-                <?php endif; ?>
               </div>
             <?php endif; ?>
             <section role ="search">

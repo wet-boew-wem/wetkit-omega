@@ -99,12 +99,18 @@
           <div id="base-bnr-in">
             <?php if ($site_name || $site_slogan): ?>
               <div id="base-title">
-                <?php if ($site_name): ?>
-                  <p id="base-title-in"><?php print $site_name; ?></p>
-                <?php endif; ?>
-                <?php if ($site_slogan): ?>
-                  <h2 class="site-slogan"><?php print $site_slogan; ?></h2>
-                <?php endif; ?>
+                <p id="base-title-in">
+                  <a href="<?php print $site_frontpage; ?>">
+                    <span>
+                      <?php if ($site_name): ?>
+                        <?php print $site_name; ?>
+                      <?php endif; ?>
+                      <?php if ($site_slogan): ?>
+                        <small><?php print $site_slogan; ?></small>
+                      <?php endif; ?>
+                    </span>
+                  </a>
+                </p>
               </div>
             <?php endif; ?>
             <section role ="search">
