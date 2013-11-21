@@ -144,9 +144,11 @@
             </section>
           </div>
         </div>
+        <?php if ($wetkit_sub_site != ''): ?>
         <div id="gcwu-subsite" class="gcwu-subsite-1">
           <p><?php print l($wetkit_sub_site, '<front>'); ?></p>
         </div>
+        <?php endif; ?>
         <nav role="navigation">
           <div id="gcwu-psnb">
             <h2><?php print t('<span>Site</span> Menu'); ?></h2>
