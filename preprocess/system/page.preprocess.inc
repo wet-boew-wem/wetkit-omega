@@ -153,7 +153,7 @@ function wetkit_omega_preprocess_page(&$variables, $hook) {
 
   // Site Name logic.
   if (!empty($variables['site_name'])) {
-    $variables['site_frontpage'] = '/' . variable_get('site_frontpage', 'node');
+    $variables['site_name_url'] = '/' . variable_get('site_frontpage', 'node');
     $variables['site_name'] = trim($variables['site_name_title']);
   }
 
@@ -173,8 +173,7 @@ function wetkit_omega_preprocess_page(&$variables, $hook) {
   // Assign an alternate Site URL.
   $alternate_site_url = omega_theme_get_setting('wetkit_sub_site_alt_url');
   if (!empty($alternate_site_url)) {
-    $variables['site_name_title'] = variable_get('site_name', 'Drupal');
-    $variables['site_name'] = l($variables['site_name_title'], $alternate_site_url, array('attributes' => array('title' => t('Home page'))));
+    $variables['site_name_url'] = $alternate_site_url;
   }
 
   // Assign the search indexing settings.

@@ -121,7 +121,7 @@
             <?php if ($site_name || $site_slogan): ?>
               <div id="gcwu-title">
                 <p id="gcwu-title-in">
-                  <a href="<?php print $site_frontpage; ?>">
+                  <a href="<?php print $site_name_url; ?>">
                     <span>
                       <?php if ($site_name): ?>
                         <?php print $site_name; ?>

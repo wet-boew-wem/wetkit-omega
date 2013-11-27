@@ -102,7 +102,7 @@
               <div id="ogpl-title">
                   <p id="ogpl-title-in">
                     <?php if ($site_name || $logo): ?>
-                      <a href="<?php print $site_frontpage; ?>">
+                      <a href="<?php print $site_name_url; ?>">
                         <?php if ($logo): ?>
                           <img alt="<?php print t('WxT Logo'); ?>" src="<?php print $logo; ?>"  />
                         <?php endif; ?>
