@@ -115,7 +115,7 @@ function wetkit_omega_preprocess_page(&$variables, $hook) {
         $variables['logo'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-intranet/images/sig-eng.png';
       }
       if ($language->language == 'fr') {
-        $variables['logo_svg'] = libraries_get_path('wet-boew', TRUE) . 'dist/theme-gcwu-intranet/images/sig-blk-fra.svg';
+        $variables['logo_svg'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-intranet/images/sig-blk-fra.svg';
         $variables['logo'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-intranet/images/sig-fra.png';
       }
     }
