@@ -129,14 +129,14 @@
           <div id="base-psnb">
             <h2><?php print t('<span>Site</span> Menu'); ?></h2>
             <div id="base-psnb-in">
-              <div class="wet-boew-menubar mb-mega">
-                <div>
-                  <!-- region: Mega Menu -->
-                  <?php if ($page['mega_menu']): ?>
+              <?php if ($page['mega_menu']): ?>
+                <div class="wet-boew-menubar mb-mega">
+                  <div>
+                    <!-- region: Mega Menu -->
                     <?php print render($page['mega_menu']); ?>
-                  <?php endif; ?>
+                  </div>
                 </div>
-              </div>
+              <?php endif; ?>
             </div>
           </div>
           <?php if ($breadcrumb): ?>
