@@ -122,7 +122,7 @@
               <div id="gcwu-title">
                 <p id="gcwu-title-in">
                   <a href="<?php print $site_name_url; ?>">
-                    <span>
+                    <span <?php print $variables['logo_class']; ?>>
                       <?php if ($site_name): ?>
                         <?php print $site_name; ?>
                       <?php endif; ?>

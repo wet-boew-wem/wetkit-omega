@@ -21,6 +21,9 @@ function wetkit_omega_preprocess_page(&$variables, $hook) {
   $variables['header_attributes_array']['class'][] = 'clearfix';
   $variables['header_attributes_array']['role'][] = 'banner';
 
+  // Logo attributes.
+  $variables['logo_class'] = '';
+
   // Build variable(s) for svg logo.
   $variables['logo_svg'] = '';
 
@@ -80,15 +83,17 @@ function wetkit_omega_preprocess_page(&$variables, $hook) {
   }
 
   // Custom Logic Based on Theme Selection
-  $is_logo_rendered = FALSE;
+  $toggle_logo = theme_get_setting('toggle_logo', 'wetkit_omega');
+  $default_logo = theme_get_setting('default_logo', 'wetkit_omega');
+  $default_svg_logo = theme_get_setting('wetkit_theme_svg_default_logo', 'wetkit_omega');
 
-  // Internet Theme.
+  // INTRANET THEME.
   if (variable_get('wetkit_wetboew_theme', 0) == 1) {
     $theme_prefix = 'gcwu';
     $theme_menu_prefix = 'gcwu-gcnb';
 
     // Default Logo logic.
-    if ((theme_get_setting('default_logo', 'wetkit_omega') == 0) && (theme_get_setting('wetkit_theme_svg_default_logo', 'wetkit_omega') == 1)) {
+    if (($default_logo == 0) && ($default_svg_logo == 1)) {
       if ($language->language == 'en') {
         $variables['logo_svg'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-fegc/images/sig-eng.svg';
         $variables['logo'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-fegc/images/sig-eng.png';
@@ -97,19 +102,24 @@ function wetkit_omega_preprocess_page(&$variables, $hook) {
         $variables['logo_svg'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-fegc/images/sig-fra.svg';
         $variables['logo'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-fegc/images/sig-fra.png';
       }
+
+      // Toggle Logo.
+      if (!$toggle_logo) {
+        $variables['logo_class'] = drupal_attributes(array('class' => 'no-logo'));
+      }
     }
 
     // WMMS Logic.
     $variables['wmms'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-fegc/images/wmms.svg';
     $variables['wmms_alt'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-fegc/images/wmms.png';
   }
-  // Intranet Theme.
+  // INTERNET THEME.
   elseif (variable_get('wetkit_wetboew_theme', 0) == 2) {
     $theme_prefix = 'gcwu';
     $theme_menu_prefix = 'gcwu-gcnb';
 
     // Default Logo logic.
-    if ((theme_get_setting('default_logo', 'wetkit_omega') == 0) && (theme_get_setting('wetkit_theme_svg_default_logo', 'wetkit_omega') == 1)) {
+    if (($default_logo == 0) && ($default_svg_logo == 1)) {
       if ($language->language == 'en') {
         $variables['logo_svg'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-intranet/images/sig-blk-eng.svg';
         $variables['logo'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-intranet/images/sig-eng.png';
@@ -118,16 +128,26 @@ function wetkit_omega_preprocess_page(&$variables, $hook) {
         $variables['logo_svg'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-intranet/images/sig-blk-fra.svg';
         $variables['logo'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-intranet/images/sig-fra.png';
       }
+
+      // Toggle Logo.
+      if (!$toggle_logo) {
+        $variables['logo_class'] = drupal_attributes(array('class' => 'no-logo'));
+      }
     }
 
     // WMMS Logic.
     $variables['wmms'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-intranet/images/wmms-intra.svg';
     $variables['wmms_alt'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-gcwu-intranet/images/wmms.png';
   }
-  // Base Theme.
+  // BASE THEME.
   elseif (variable_get('wetkit_wetboew_theme', 0) == 3) {
     $theme_prefix = 'base';
     $theme_menu_prefix = 'base-gcnb';
+
+    // Toggle Logo.
+    if (!$toggle_logo) {
+      $variables['logo_class'] = drupal_attributes(array('class' => 'no-logo'));
+    }
   }
   // OGPL Theme.
   elseif (variable_get('wetkit_wetboew_theme', 0) == 4) {
@@ -135,19 +155,33 @@ function wetkit_omega_preprocess_page(&$variables, $hook) {
     $theme_menu_prefix = 'ogpl-fullhd';
 
     // Default Logo logic.
-    if ((theme_get_setting('default_logo', 'wetkit_omega') == 0)) {
+    if ($default_logo == 0) {
       $variables['logo'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-ogpl/images/theme103_logo.png';
     }
+
+    // Toggle Logo.
+    if (!$toggle_logo) {
+      $variables['logo'] = '';
+      $variables['logo_svg'] = '';
+      $variables['logo_class'] = drupal_attributes(array('class' => 'no-logo'));
+    }
   }
-  // WET Theme.
+  // WXT THEME.
   else {
     $theme_prefix = 'wet';
     $theme_menu_prefix = 'wet-fullhd';
 
     // Default Logo logic.
-    if ((theme_get_setting('default_logo', 'wetkit_omega') == 0) && (theme_get_setting('wetkit_theme_svg_default_logo', 'wetkit_omega') == 1)) {
+    if (($default_logo == 0) && ($default_svg_logo == 1)) {
       $variables['logo_svg'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-wet-boew/images/logo.svg';
       $variables['logo'] = libraries_get_path('wet-boew', TRUE) . '/dist/theme-wet-boew/images/logo.png';
+    }
+
+    // Toggle Logo.
+    if (!$toggle_logo) {
+      $variables['logo'] = '';
+      $variables['logo_svg'] = '';
+      $variables['logo_class'] = drupal_attributes(array('class' => 'no-logo'));
     }
   }
 

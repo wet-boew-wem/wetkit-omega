@@ -101,7 +101,7 @@
               <div id="base-title">
                 <p id="base-title-in">
                   <a href="<?php print $site_name_url; ?>">
-                    <span>
+                    <span <?php print $variables['logo_class']; ?>>
                       <?php if ($site_name): ?>
                         <?php print $site_name; ?>
                       <?php endif; ?>

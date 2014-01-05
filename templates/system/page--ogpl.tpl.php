@@ -106,7 +106,7 @@
                         <?php if ($logo): ?>
                           <img alt="<?php print t('WxT Logo'); ?>" src="<?php print $logo; ?>"  />
                         <?php endif; ?>
-                        <span>
+                        <span <?php print $variables['logo_class']; ?>>
                           <?php if ($site_name): ?>
                             <?php print $site_name; ?>
                           <?php endif; ?>
