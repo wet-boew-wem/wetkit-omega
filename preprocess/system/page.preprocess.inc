@@ -187,7 +187,7 @@ function wetkit_omega_preprocess_page(&$variables, $hook) {
 
   // Site Name logic.
   if (!empty($variables['site_name'])) {
-    $variables['site_name_url'] = '/' . variable_get('site_frontpage', 'node');
+    $variables['site_name_url'] = variable_get('site_frontpage', 'node');
     $variables['site_name'] = trim($variables['site_name_title']);
   }
 
