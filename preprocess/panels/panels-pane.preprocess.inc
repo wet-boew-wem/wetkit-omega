@@ -27,4 +27,22 @@ function wetkit_omega_preprocess_panels_pane(&$variables) {
       $variables['date_mod'] = 'wet-date-mod';
     }
   }
+
+  if (isset($variables['pane']->style['settings']['configure_pane_title_backgrounds'])) {
+    // if a title background is set
+    $style = $variables['pane']->style['settings']['configure_pane_title_backgrounds'];
+    if ($variables['pane']->type == 'menu_tree') {
+      if (isset($variables['content']['#content'])) {
+        $menu_element= element_children($variables['content']['#content']);
+        if (isset($variables['content']['#content'][$menu_element[0]]['#attributes'])) {
+          // being extra safe
+          $variables['content']['#content'][$menu_element[0]]['#attributes']['class'][] = $style;
+        }
+      }
+    } else {
+      $class_stack = explode(" ", $style);
+      $variables['title_attributes_array']['class'] = array_merge($variables['title_attributes_array']['class'], $class_stack);
+    }
+
+  }
 }
