@@ -12,6 +12,15 @@
   border-top: none;
 }
 
+
+.ui-dialog-titlebar {
+  .ui-icon-closethick {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+}
+
 .media-wrapper
 .ui-dialog-titlebar {
   .ui-icon-closethick {
