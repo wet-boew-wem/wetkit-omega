@@ -173,6 +173,50 @@ div.ctools-dropbutton .ctools-link a {
 }
 
 /* =============================================================================
+   Ember
+   ========================================================================== */
+.page-node-edit .ui-widget-overlay {
+  position: fixed;
+}
+
+.page-media-browser #media-browser-page-wrapper {
+  border-top: none;
+}
+
+.media-wrapper
+.ui-dialog-titlebar {
+  border: none;
+  background: none;
+  background-color: #2fa6e5;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px;
+  padding-left: 30px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+.media-wrapper
+.ui-dialog-titlebar .ui-icon-closethick {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  margin: 0px;
+  background: none;
+}
+
+.ui-corner-all {
+  border-bottom: 1px solid black;
+  -webkit-border-radius: inherit;
+}
+
+.media-wrapper
+.ui-dialog .ui-dialog-titlebar-close {
+  right: .6em;
+}
+
+/* =============================================================================
    Field
    ========================================================================== */
 .field-label-inline .field-label {
