@@ -63,7 +63,9 @@
             </div>
             <div class="clear"></div>
             <div id="gcwu-title-left" class="span-4 row-start" lang="en"><a href="/en"><?php print $site_name; ?></a></div>
+            <?php if (!$db_down): ?>
             <div id="gcwu-title-right" class="span-4 row-end" lang="fr"><a href="/fr"><?php print i18n_variable_get('site_name', 'fr', $site_name); ?></a></div>
+            <?php endif; ?>
             <div class="clear"></div>
           </div>
           <!-- HeaderEnd -->
@@ -79,7 +81,7 @@
             <div class="span-8">
               <section>
                 <?php if ($title): ?>
-                <h2><?php print $title; ?></h1>
+                <h2><?php print $title; ?></h2>
                 <?php endif; ?>
                 <?php print $messages; ?>
                 <?php print $content; ?>
