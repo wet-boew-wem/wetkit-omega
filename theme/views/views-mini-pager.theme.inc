@@ -32,12 +32,12 @@ function wetkit_omega_views_mini_pager($vars) {
       'element' => $element,
       'interval' => 1,
       'parameters' => $parameters,
-      'attributes' => array('class' => 'button button-accent ui-link'),
+      'attributes' => array('class' => 'button button-small button-accent ui-link'),
     )
     );
     if (empty($li_previous)) {
-      $li_previous = '&lt;&lt;';
-      $li_previous_class = array('button button-disabled pager-previous');
+      $li_previous = '<span class="button button-small button-attention button-disabled ui-disabled">&lt;&lt;</span>';
+      $li_previous_class = array('pager-previous');
     } else {
       $li_previous_class = array('pager-previous');
     }
@@ -48,13 +48,13 @@ function wetkit_omega_views_mini_pager($vars) {
       'element' => $element,
       'interval' => 1,
       'parameters' => $parameters,
-      'attributes' => array('class' => 'button button-accent ui-link'),
+      'attributes' => array('class' => 'button button-small button-accent ui-link'),
     )
     );
 
     if (empty($li_next)) {
-      $li_next = '&gt;&gt;';
-      $li_next_class = array('button button-disabled pager-next');
+      $li_next = '<span class="button button-small button-attention button-disabled ui-disabled">&gt;&gt;</span>';
+      $li_next_class = array('pager-next');
     } else {
       $li_next_class = array('pager-next');
     }
@@ -63,22 +63,27 @@ function wetkit_omega_views_mini_pager($vars) {
       'class' => $li_previous_class,
       'data' => $li_previous,
     );
+
+    $li_current = '<span class="button button-small button-attention button-disabled ui-disabled">';
+    $li_current .= t('@current of @max', array('@current' => $pager_current, '@max' => $pager_max));
+    $li_current .= '</span>';
     $items[] = array(
-      'class' => array('button button-disabled pager-current'),
-      'data' => t('@current of @max', array('@current' => $pager_current, '@max' => $pager_max)),
+      'class' => array('pager-current'),
+      'data' =>  $li_current,
     );
     $items[] = array(
       'class' => $li_next_class,
       'data' => $li_next,
     );
 
-    return theme('item_list',
-      array(
-      'items' => $items,
-      'title' => NULL,
-      'type' => 'ul',
-      'attributes' => array('class' => array('pager')),
-    )
-    );
+    return '<div class="pager-container"><h2 class="wb-invisible">' . t('Pages') . '</h2>' .
+      theme('item_list',
+        array(
+        'items' => $items,
+        'title' => NULL,
+        'type' => 'ul',
+        'attributes' => array('class' => array('pager menu-horizontal')),
+        )
+      ) . '</div>';
   }
 }
