@@ -29,7 +29,7 @@ function wetkit_omega_preprocess_page(&$variables, $hook) {
 
   // Site name.
   if (!empty($variables['site_name'])) {
-    $variables['site_name_title'] = variable_get('site_name', 'Drupal');
+    $variables['site_name_title'] = filter_xss(variable_get('site_name', 'Drupal'));
     $variables['site_name'] = l($variables['site_name_title'], variable_get('site_frontpage', 'node'), array('attributes' => array('title' => t('Home page'))));
     $variables['site_name_unlinked'] = $variables['site_name_title'];
   }
@@ -197,13 +197,6 @@ function wetkit_omega_preprocess_page(&$variables, $hook) {
     $is_multilingual = 1;
   }
 
-  if ($language->language == 'en') {
-    $variables['language_suffix'] = 'eng';
-  }
-  else {
-    $variables['language_suffix'] = 'fra';
-  }
-
   // Assign an alternate Site URL.
   $alternate_site_url = omega_theme_get_setting('wetkit_sub_site_alt_url');
   if (!empty($alternate_site_url)) {
@@ -267,6 +260,13 @@ function wetkit_omega_preprocess_page(&$variables, $hook) {
   if (module_exists('menu_block') && empty($variables['page']['mega_menu'])) {
     $config = menu_block_get_config('main_menu');
     $data = menu_tree_build($config);
+
+    $data['content']['#cache'] = array(
+      'keys' => array('wetkit_mega_menu_region_content'),
+      'expire' => CACHE_TEMPORARY,
+      'granularity' => DRUPAL_CACHE_PER_PAGE, // unset this to cache globally
+    );
+
     $variables['page']['mega_menu'] = $data['content'];
   }
 
@@ -285,6 +285,13 @@ function wetkit_omega_preprocess_page(&$variables, $hook) {
   if (module_exists('menu_block')) {
     $config = menu_block_get_config('mid_footer_menu');
     $data = menu_tree_build($config);
+
+    $data['content']['#cache'] = array(
+      'keys' => array('wetkit_mid_footer_region_content'),
+      'expire' => CACHE_TEMPORARY,
+      'granularity' => DRUPAL_CACHE_PER_PAGE, // unset this to cache globally
+    );
+
     $variables['page']['footer'] = $data['content'];
   }
 
