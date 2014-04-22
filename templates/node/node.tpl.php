@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Omega implementation to display a node.
+ * Default theme implementation to display a node.
  *
  * Available variables:
  * - $title: the (sanitized) title of the node.
@@ -15,13 +15,15 @@
  * - $name: Themed username of node author output from theme_username().
  * - $node_url: Direct url of the current node.
  * - $display_submitted: Whether submission information should be displayed.
+ * - $submitted: Submission information created from $name and $date during
+ *   template_preprocess_node().
  * - $classes: String of classes that can be used to style contextually through
  *   CSS. It can be manipulated through the variable $classes_array from
  *   preprocess functions. The default values can be one or more of the
  *   following:
  *   - node: The current template type, i.e., "theming hook".
  *   - node-[type]: The current node type. For example, if the node is a
- *     "Blog entry" it would result in "node-blog". Note that the machine
+ *     "Article" it would result in "node-article". Note that the machine
  *     name will often be in a short form of the human readable label.
  *   - node-teaser: Nodes in teaser form.
  *   - node-preview: Nodes in preview mode.
@@ -39,7 +41,7 @@
  *
  * Other variables:
  * - $node: Full node object. Contains data that may not be safe.
- * - $type: Node type, i.e. story, page, blog, etc.
+ * - $type: Node type, i.e. page, article, etc.
  * - $comment_count: Number of comments attached to the node.
  * - $uid: User ID of the node author.
  * - $created: Time the node was published formatted in Unix timestamp.
@@ -73,21 +75,11 @@
  * @see template_preprocess()
  * @see template_preprocess_node()
  * @see template_process()
- * @see omega_preprocess_node()
- * @see omega_process_node()
- */
-
-/**
- * Hiding Content and Printing it Separately
- *
- * Use the hide() function to hide fields and other content, you can render it
- * later using the render() function. Install the Devel module and use
- * <?php print dsm($content); ?> to find variable names to hide() or render().
  */
 hide($content['comments']);
 hide($content['links']);
 ?>
-<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+<article id="node-<?php print $node->nid; ?>"<?php print $attributes; ?>>
   <?php print render($title_prefix); ?>
   <?php if ($title && !$page): ?>
     <header<?php print $header_attributes; ?>>
