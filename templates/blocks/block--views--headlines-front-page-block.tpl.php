@@ -50,7 +50,7 @@
 
 <section>
   <div id="gcwu-headlines">
-  <div id="<?php print $block_html_id; ?>"<?php print $attributes; ?>>
+  <div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
 
     <?php print render($title_prefix); ?>
 

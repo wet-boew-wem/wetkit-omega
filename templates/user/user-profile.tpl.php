@@ -31,6 +31,6 @@
  * @see template_preprocess_user_profile()
  */
 ?>
-<article<?php print $attributes; ?>>
+<article class="profile"<?php print $attributes; ?>>
   <?php print render($user_profile); ?>
 </article>
