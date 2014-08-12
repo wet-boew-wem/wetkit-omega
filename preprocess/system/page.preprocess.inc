@@ -254,6 +254,14 @@ function wetkit_omega_preprocess_page(&$variables, $hook) {
     $variables['custom_search']['actions']['submit']['#attributes']['value'] = t('Search');
     $variables['search_box'] = render($variables['custom_search']);
     $variables['search_box'] = str_replace('type="text"', 'type="search"', $variables['search_box']);
+
+    // Remove empty attributes.
+    if (empty($variables['custom_search']['custom_search_blocks_form_1']['#attributes']['title'])) {
+      unset($variables['custom_search']['custom_search_blocks_form_1']['#attributes']['title']);
+    }
+    if (empty($variables['custom_search']['custom_search_blocks_form_1']['#attributes']['placeholder'])) {
+      unset($variables['custom_search']['custom_search_blocks_form_1']['#attributes']['placeholder']);
+    }
   }
 
   // Mega Menu Region.
