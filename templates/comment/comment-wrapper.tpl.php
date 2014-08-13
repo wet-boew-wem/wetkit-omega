@@ -34,7 +34,7 @@
  * @see theme_comment_wrapper()
  */
 ?>
-<section id="comments" class="<?php print $classes; ?>"<?php print $attributes; ?>>
+<section id="comments"<?php print $attributes; ?>>
 
   <?php if ($content['comments'] && $node->type != 'forum'): ?>
     <?php print render($title_prefix); ?>

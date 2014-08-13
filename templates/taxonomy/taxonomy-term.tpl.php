@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Omega implementation to display a term.
+ * Default theme implementation to display a term.
  *
  * Available variables:
  * - $name: the (sanitized) name of the term.
@@ -11,13 +11,13 @@
  *   such as render($content['field_example']). Use
  *   hide($content['field_example']) to temporarily suppress the printing of a
  *   given element.
- * - $term_url: Direct url of the current term.
+ * - $term_url: Direct URL of the current term.
  * - $term_name: Name of the current term.
  * - $classes: String of classes that can be used to style contextually through
  *   CSS. It can be manipulated through the variable $classes_array from
- *   preprocess functions. The default values one or more of the following:
+ *   preprocess functions. The default values can be one or more of the following:
  *   - taxonomy-term: The current template type, i.e., "theming hook".
- *   - vocabulary-[vocabulary-name]: The vocabulary which the term belongs to.
+ *   - vocabulary-[vocabulary-name]: The vocabulary to which the term belongs to.
  *     For example, if the term is a "Tag" it would result in "vocabulary-tag".
  *
  * Other variables:
@@ -36,10 +36,12 @@
  * @see template_preprocess()
  * @see template_preprocess_taxonomy_term()
  * @see template_process()
+ *
+ * @ingroup themeable
  */
 ?>
 <?php if ($content = render($content)): ?>
-<article id="taxonomy-term-<?php print $term->tid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
+<article id="taxonomy-term-<?php print $term->tid; ?>"<?php print $attributes; ?>>
   <?php print render($title_prefix); ?>
 
   <?php if (!$page): ?>
