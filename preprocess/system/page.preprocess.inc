@@ -300,7 +300,9 @@ function wetkit_omega_preprocess_page(&$variables, $hook) {
       'granularity' => DRUPAL_CACHE_PER_PAGE, // unset this to cache globally
     );
 
-    $variables['page']['footer'] = $data['content'];
+
+    unset($variables['page']['footer']['system_powered-by']);
+    $variables['page']['footer']['minipanel'] = $data['content'];
   }
 
   // Footer Navigation.
