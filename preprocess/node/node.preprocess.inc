@@ -33,7 +33,10 @@ function wetkit_omega_preprocess_node(&$variables, $hook) {
     $variables['date_mod'] = 'wet-date-mod';
   }
   $node = $variables['node'];
-  $variables['date'] = format_date($node->changed, 'custom', 'Y-m-d');
+  global $language;
+  $variables['date'] = isset($node->translations->data[$language->language]['changed']) ?
+    format_date($node->translations->data[$language->language]['changed'], 'custom', 'Y-m-d') :
+    format_date($node->changed, 'custom', 'Y-m-d');
 
   // Header, submitted and links wrappers have their own attributes.
   $variables['header_attributes_array']['class'][] = 'node-header';
