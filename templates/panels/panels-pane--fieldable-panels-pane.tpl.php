@@ -25,7 +25,7 @@
 <?php if ($pane_prefix): ?>
   <?php print $pane_prefix; ?>
 <?php endif; ?>
-<div class="<?php print $classes; ?>" <?php print $id; ?>>
+<div class="<?php print $classes; ?>" <?php print $id; ?> <?php print $attributes; ?>>
   <div class="block-inner clearfix">
     <?php if ($admin_links): ?>
       <?php print $admin_links; ?>
