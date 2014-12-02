@@ -7,3 +7,4 @@ api = 2
 
 projects[omega][version] = 4.3
 projects[omega][type] = theme
+projects[omega][patch][2292961] = http://drupal.org/files/issues/function_include_files-2292961-8.patch
