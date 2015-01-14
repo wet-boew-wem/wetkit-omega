@@ -36,13 +36,22 @@ function wetkit_omega_form_element_label($variables) {
     $attributes['class'] = 'element-invisible';
   }
 
-  if (!empty($element['#id'])) {
+  // Accessibility fix:
+  // See: https://www.drupal.org/node/2279111
+  // and https://www.drupal.org/node/504962
+  // Remove 'for' attribute from known drupal-specific unlabelable elements.
+  $unlabelable_elements = array('radios', 'checkboxes', 'date');
+  if (!empty($element['#id']) && !in_array($variables['element']['#type'], $unlabelable_elements)) {
+    // labelable element: add a 'for' attribute
     $attributes['for'] = $element['#id'];
+  } else {
+    // label this element as a composite form
+    $variables['#composite'] = TRUE;
   }
 
   // The leading whitespace helps visually separate fields from inline labels.
   if (isset($variables['#composite']) && $variables['#composite'] == TRUE) {
-    return ' <span class="webform-composite">' . $t('!title !required', array('!title' => $title, '!required' => $required)) . "</span>\n";
+    return ' <span class="composite-form-label">' . $t('!title !required', array('!title' => $title, '!required' => $required)) . "</span>\n";
   }
   else {
     return ' <label' . drupal_attributes($attributes) . '>' . $t('!title !required', array('!title' => $title, '!required' => $required)) . "</label>\n";

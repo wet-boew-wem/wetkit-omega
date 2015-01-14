@@ -469,6 +469,10 @@ ul.tabs {
   font-weight: normal;
 }
 
+.composite-form-label {
+  font-weight: 700;
+}
+
 /* =============================================================================
    User
    ========================================================================== */
@@ -686,7 +690,7 @@ ul.tabs {
    ========================================================================== */
 #block-workbench-block .workbench-info-block {
   margin: 0px 10px 10px 10px;
-  background-color: #ffffce !important;
+  background-color: #FFFFCE !important;
   color: #000;
   font-weight: 600;
 }
