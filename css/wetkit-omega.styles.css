@@ -249,7 +249,7 @@ div.ctools-dropbutton .ctools-link a {
    Linkit
    ========================================================================== */
 .ui-dialog.linkit-wrapper {
-  z-index: 501;
+  z-index: 9999;
   background-color: white !important;
 }
 .ui-dialog.linkit-wrapper .ui-dialog-titlebar {
@@ -283,7 +283,7 @@ div.ctools-dropbutton .ctools-link a {
    Metatag
    ========================================================================== */
 .media-wrapper {
-  z-index: 999 !important;
+  z-index: 9999 !important;
 }
 
 /* =============================================================================
