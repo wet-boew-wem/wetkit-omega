@@ -25,7 +25,7 @@
 <?php if ($pane_prefix): ?>
   <?php print $pane_prefix; ?>
 <?php endif; ?>
-<div class="<?php print $classes; ?>" <?php print $id; ?> <?php print $attributes; ?>>
+<div<?php print $attributes; ?>>
   <div id="gcwu-headlines" class="block-inner clearfix">
     <?php if ($admin_links): ?>
       <?php print $admin_links; ?>
