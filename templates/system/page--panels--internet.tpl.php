@@ -81,8 +81,10 @@
 ?>
 <div id="page" class="container <?php print $classes; ?>">
   <!-- region: Leaderboard -->
-  <?php if ($page['leaderboard']): ?>
-    <?php print render($page['leaderboard']); ?>
+  <?php if (isset($page['leaderboard'])): ?>
+    <?php if ($page['leaderboard']): ?>
+      <?php print render($page['leaderboard']); ?>
+    <?php endif; ?>
   <?php endif; ?>
   <div id="wb-head">
     <div id="wb-head-in">
